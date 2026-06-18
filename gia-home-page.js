@@ -1,6 +1,4 @@
-/* GIVE IT ALL - Home page, packaged as a Wix Custom Element.
-   Generated from "Give It All - Home.html". Tag name in Wix: gia-home-page
-   Turn Wix global header + footer OFF (page carries its own). */
+/* GIVE IT ALL - Home page Wix Custom Element. Tag: gia-home-page. Turn Wix header+footer OFF. */
 (function(){
   if (customElements.get('gia-home-page')) return;
   var CSS = `
@@ -250,6 +248,7 @@
   .nav-drop a.is-soon span{font-size:.6rem;letter-spacing:.12em;text-transform:uppercase;border:1px solid rgba(177,191,215,.35);border-radius:999px;padding:.15em .6em;font-weight:700}
   .nav-cta{display:flex;align-items:center;gap:18px}
   .nav-cta .btn{padding:.7em 1.3em;font-size:.9rem}
+  .nav-mobile-cta{display:none}
   .menu-btn{display:none;background:none;border:none;color:var(--body);cursor:pointer;flex-direction:column;gap:5px;padding:6px}
   .menu-btn span{display:block;width:24px;height:2px;background:var(--body);border-radius:2px}
   @media(max-width:880px){
@@ -257,7 +256,7 @@
     .nav-inner{padding:10px var(--gutter)}
     .logo{font-size:1rem}
     .logo .mark{width:26px;height:26px;font-size:.85rem}
-    .nav-cta .btn{padding:.62em 1.05em;font-size:.82rem}
+    .nav-cta .btn{display:none}
     .nav-links{
       display:none;
       position:absolute;top:100%;left:0;right:0;
@@ -267,7 +266,8 @@
       padding:12px var(--gutter) 22px;
     }
     .nav.menu-open .nav-links{display:flex}
-    .nav-links > a{padding:13px 4px;font-size:1.05rem;border-bottom:1px solid rgba(177,191,215,.08)}
+    .nav-links > a:not(.btn){padding:13px 4px;font-size:1.05rem;border-bottom:1px solid rgba(177,191,215,.08)}
+    .nav-mobile-cta{display:inline-flex;align-self:flex-start;margin:14px 4px 2px;padding:.8em 1.6em;font-size:.95rem}
     .nav-item{flex-direction:column;align-items:stretch}
     .nav-drop-toggle{padding:13px 4px;font-size:1.05rem;justify-content:space-between;width:100%}
     .nav-item .nav-drop{
@@ -533,6 +533,7 @@
       <a href="https://www.giveitallevent.com/members" target="_blank" rel="noopener">Members</a>
       <a href="https://www.giveitallevent.com/partners" target="_blank" rel="noopener">Partners</a>
       <a href="https://www.giveitallevent.com/about-us" target="_blank" rel="noopener">About</a>
+      <a href="https://www.giveitallevent.com/bali-speaker-networking-event" class="btn btn-gold nav-mobile-cta">Get tickets <span class="arrow">→</span></a>
     </nav>
     <div class="nav-cta">
       <a href="https://www.giveitallevent.com/bali-speaker-networking-event" class="btn btn-gold">Get tickets <span class="arrow">→</span></a>
@@ -830,8 +831,7 @@
 
 `;
   if (!document.getElementById('gia-fonts')) {
-    var l = document.createElement('link');
-    l.id = 'gia-fonts'; l.rel = 'stylesheet';
+    var l = document.createElement('link'); l.id='gia-fonts'; l.rel='stylesheet';
     l.href = 'https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,500;0,600;0,700;0,800;1,500&family=Caveat:wght@500;600;700&display=swap';
     document.head.appendChild(l);
   }
@@ -848,16 +848,13 @@
         });
       });
 
-      // ---- collapse any oversized Wix ancestor (stale runaway section height) ----
       var collapseAncestors = function(){
         try{
           var hostH = host.getBoundingClientRect().height;
           if(hostH < 50) return;
           var n = host.parentElement, guard = 0;
           while(n && n !== document.body && guard++ < 14){
-            if(n.getBoundingClientRect().height > hostH + 400){
-              n.style.height = 'auto'; n.style.minHeight = '0px';
-            }
+            if(n.getBoundingClientRect().height > hostH + 400){ n.style.height='auto'; n.style.minHeight='0px'; }
             n = n.parentElement;
           }
         }catch(e){}
@@ -866,7 +863,6 @@
       [400,1200,2500].forEach(function(t){ setTimeout(collapseAncestors, t); });
       window.addEventListener('resize', collapseAncestors, {passive:true});
 
-      // ---- page behaviours (scoped to the shadow root) ----
 
   // nav scrolled state + persistent trust chip
   const nav = root.getElementById('nav');
