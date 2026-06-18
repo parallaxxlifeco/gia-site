@@ -1,6 +1,6 @@
 /* GIVE IT ALL - Home page, packaged as a Wix Custom Element.
-   Generated from "Give It All - Home.html". Tag name to set in Wix: gia-home-page
-   Renders in Shadow DOM. Turn Wix global header + footer OFF (page carries its own). */
+   Generated from "Give It All - Home.html". Tag name in Wix: gia-home-page
+   Turn Wix global header + footer OFF (page carries its own). */
 (function(){
   if (customElements.get('gia-home-page')) return;
   var CSS = `
@@ -847,6 +847,25 @@
           if (id.length > 1) { var t = root.querySelector(id); if (t){ e.preventDefault(); t.scrollIntoView({behavior:'smooth'}); } }
         });
       });
+
+      // ---- collapse any oversized Wix ancestor (stale runaway section height) ----
+      var collapseAncestors = function(){
+        try{
+          var hostH = host.getBoundingClientRect().height;
+          if(hostH < 50) return;
+          var n = host.parentElement, guard = 0;
+          while(n && n !== document.body && guard++ < 14){
+            if(n.getBoundingClientRect().height > hostH + 400){
+              n.style.height = 'auto'; n.style.minHeight = '0px';
+            }
+            n = n.parentElement;
+          }
+        }catch(e){}
+      };
+      requestAnimationFrame(collapseAncestors);
+      [400,1200,2500].forEach(function(t){ setTimeout(collapseAncestors, t); });
+      window.addEventListener('resize', collapseAncestors, {passive:true});
+
       // ---- page behaviours (scoped to the shadow root) ----
 
   // nav scrolled state + persistent trust chip
