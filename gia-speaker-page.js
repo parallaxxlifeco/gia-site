@@ -112,7 +112,7 @@
     }
 
     /* ── HERO ── */
-    .hero{ position:relative; min-height:92vh; display:flex; align-items:flex-end; overflow:hidden; }
+    .hero{ position:relative; min-height:clamp(560px,90vh,860px); display:flex; align-items:flex-end; overflow:hidden; }
     .hero-bg{ position:absolute; inset:0; }
     .hero-bg img{ width:100%; height:100%; object-fit:cover; object-position:center 38%; }
     .hero-bg::after{ content:""; position:absolute; inset:0; background:
@@ -346,7 +346,7 @@
     @media(max-width:620px){
       .img-pair{ grid-template-columns:1fr; }
       .fit-grid{ grid-template-columns:1fr; }
-      .hero{ min-height:88vh; }
+      .hero{ min-height:clamp(520px,84vh,720px); }
       .hero-inner{ padding-top:104px; }
     }
   `;
@@ -735,7 +735,6 @@
   </div>
 </footer>`;
 
-  // load brand fonts once (document-level so shadow content can use them)
   if (!document.getElementById('gia-fonts')) {
     var l = document.createElement('link');
     l.id = 'gia-fonts'; l.rel = 'stylesheet';
@@ -746,6 +745,7 @@
   class GIASpeakerPage extends HTMLElement {
     connectedCallback(){
       if (this._mounted) return; this._mounted = true;
+      var host = this;
       var shadow = this.attachShadow({mode:'open'});
       shadow.innerHTML = '<style>'+CSS+'</style>'+HTML;
       var root = shadow;
@@ -757,6 +757,24 @@
           if (id && id.length > 1) { var t = root.querySelector(id); if (t){ e.preventDefault(); t.scrollIntoView({behavior:'smooth'}); } }
         });
       });
+
+      // ---- collapse any oversized Wix ancestor (stops the resize/flicker loop) ----
+      var collapseAncestors = function(){
+        try{
+          var hostH = host.getBoundingClientRect().height;
+          if(hostH < 50) return;
+          var n = host.parentElement, guard = 0;
+          while(n && n !== document.body && guard++ < 14){
+            if(n.getBoundingClientRect().height > hostH + 400){
+              n.style.height = 'auto'; n.style.minHeight = '0px';
+            }
+            n = n.parentElement;
+          }
+        }catch(e){}
+      };
+      requestAnimationFrame(collapseAncestors);
+      [400,1200,2500].forEach(function(t){ setTimeout(collapseAncestors, t); });
+      window.addEventListener('resize', collapseAncestors, {passive:true});
 
       // ===== page behavior (scoped to shadow root) =====
 
