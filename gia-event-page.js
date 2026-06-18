@@ -100,6 +100,13 @@
     display:flex;align-items:center;gap:9px;text-transform:uppercase;}
   .logo .mark{width:24px;height:24px;border-radius:7px;border:1.5px solid var(--gold);
     display:grid;place-items:center;font-size:.7rem;}
+  /* Fixed home button (top-right) — mirrors the header logo mark; used in the Wix embed where the nav is stripped */
+  .home-mark{position:fixed;top:18px;right:18px;z-index:200;width:42px;height:42px;
+    border-radius:11px;border:1.5px solid var(--gold);color:var(--gold);
+    font-weight:800;font-size:1.05rem;letter-spacing:.02em;text-decoration:none;
+    display:grid;place-items:center;background:rgba(6,25,56,.55);
+    backdrop-filter:blur(6px);transition:background .2s ease,transform .2s ease;}
+  .home-mark:hover{background:rgba(6,25,56,.9);transform:translateY(-1px);}
 
   .hero{min-height:clamp(560px,88vh,820px);display:flex;align-items:flex-end;
     position:relative;overflow:hidden;}
@@ -375,6 +382,9 @@
 
 <!-- ============ NAV ============ -->
 
+
+<!-- ============ HOME MARK (kept when nav is stripped for the Wix embed) ============ -->
+<a class="home-mark" href="https://www.giveitallevent.com" aria-label="Back to home">G</a>
 
 <!-- ============ 1 · HERO ============ -->
 <section class="hero" id="top">
