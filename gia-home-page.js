@@ -1,10 +1,8 @@
 /* GIVE IT ALL - Home page, packaged as a Wix Custom Element.
    Generated from "Give It All - Home.html". Tag name to set in Wix: gia-home-page
-   Renders in Shadow DOM so its styles never touch the rest of your Wix site.
-   Wix global header + footer should be turned OFF for this page (it carries its own). */
+   Renders in Shadow DOM. Turn Wix global header + footer OFF (page carries its own). */
 (function(){
   if (customElements.get('gia-home-page')) return;
-
   var CSS = `
   :host{
     --navy:#061938;
@@ -325,8 +323,8 @@
   @keyframes bob{0%,100%{transform:translateY(0)}50%{transform:translateY(5px)}}
 
   /* ---------- generic section spacing ---------- */
-  .sec{padding-block:clamp(80px,12vh,150px)}
-  .sec-sm{padding-block:clamp(56px,8vh,90px)}
+  .sec{padding-block:clamp(48px,7vh,84px)}
+  .sec-sm{padding-block:clamp(36px,5vh,56px)}
 
   /* ---------- THE FEELING (manifesto) ---------- */
   .manifesto{max-width:18ch}
@@ -831,29 +829,24 @@
 </footer>
 
 `;
-
   if (!document.getElementById('gia-fonts')) {
     var l = document.createElement('link');
     l.id = 'gia-fonts'; l.rel = 'stylesheet';
     l.href = 'https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,500;0,600;0,700;0,800;1,500&family=Caveat:wght@500;600;700&display=swap';
     document.head.appendChild(l);
   }
-
   class GIAHomePage extends HTMLElement {
     connectedCallback(){
       if (this._mounted) return; this._mounted = true;
       var shadow = this.attachShadow({mode:'open'});
       shadow.innerHTML = '<style>'+CSS+'</style>'+HTML;
-      var root = shadow;
-      var host = this;
-
+      var root = shadow; var host = this;
       root.querySelectorAll('a[href^="#"]').forEach(function(a){
         a.addEventListener('click', function(e){
           var id = a.getAttribute('href');
           if (id.length > 1) { var t = root.querySelector(id); if (t){ e.preventDefault(); t.scrollIntoView({behavior:'smooth'}); } }
         });
       });
-
       // ---- page behaviours (scoped to the shadow root) ----
 
   // nav scrolled state + persistent trust chip
