@@ -555,7 +555,7 @@
     <div class="eyebrow center"><span class="label">What people leave saying</span><span class="rule" style="max-width:200px;"></span></div>
     <div class="proof-grid">
       <div class="reel" data-reel="Attendee testimonials" data-video="https://video.wixstatic.com/video/111174_2e811377751843e3a811894669d1d958/1080p/mp4/file.mp4">
-        <img class="still" src="https://static.wixstatic.com/media/111174_f20153f3e59249039d9a7c6cf9491302~mv2.jpg" alt="Attendee testimonials"><div class="grad"></div>
+        <img class="still" src="https://static.wixstatic.com/media/111174_e5e5ddd61aa24416a50183c9c71a6b01~mv2.jpg" alt="Attendee testimonials"><div class="grad"></div>
         <div class="play"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></div>
       </div>
       <div class="written-col">
