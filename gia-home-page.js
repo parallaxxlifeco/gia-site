@@ -284,7 +284,7 @@
 
   /* ---------- HERO ---------- */
   .hero{
-    min-height:100svh;
+    min-height:clamp(560px,88vh,820px);
     display:flex;align-items:flex-end;
     position:relative;overflow:hidden;
     padding-bottom:clamp(40px,7vh,80px);
@@ -832,7 +832,6 @@
 
 `;
 
-  // Rule 4: load brand fonts at document level so the shadow content can use them
   if (!document.getElementById('gia-fonts')) {
     var l = document.createElement('link');
     l.id = 'gia-fonts'; l.rel = 'stylesheet';
@@ -848,7 +847,6 @@
       var root = shadow;
       var host = this;
 
-      // smooth-scroll for in-page anchors (#top etc.) across the shadow boundary
       root.querySelectorAll('a[href^="#"]').forEach(function(a){
         a.addEventListener('click', function(e){
           var id = a.getAttribute('href');
