@@ -113,7 +113,6 @@
 
     /* ── PAGE WRAPPER ─────────────────────────────────── */
     .partners-page {
-      min-height: 100vh;
       background: linear-gradient(160deg, #061938 0%, #0A1E40 35%, #0D2350 65%, #061938 100%);
       padding: calc(var(--nav-h) + 56px) 24px 100px;
     }
@@ -772,7 +771,7 @@
       if (this._mounted) return; this._mounted = true;
       var shadow = this.attachShadow({mode:'open'});
       shadow.innerHTML = '<style>'+CSS+'</style>'+HTML;
-      var root = shadow;
+      var root = shadow; var host = this;
 
       // smooth-scroll for in-page anchors (#id) across the shadow boundary
       root.querySelectorAll('a[href^="#"]').forEach(function(a){
@@ -781,6 +780,24 @@
           if (id.length > 1) { var t = root.querySelector(id); if (t){ e.preventDefault(); t.scrollIntoView({behavior:'smooth'}); } }
         });
       });
+
+      // ---- collapse any oversized Wix ancestor (stale runaway section height -> flashing) ----
+      var collapseAncestors = function(){
+        try{
+          var hostH = host.getBoundingClientRect().height;
+          if(hostH < 50) return;
+          var n = host.parentElement, guard = 0;
+          while(n && n !== document.body && guard++ < 14){
+            if(n.getBoundingClientRect().height > hostH + 400){
+              n.style.height = 'auto'; n.style.minHeight = '0px';
+            }
+            n = n.parentElement;
+          }
+        }catch(e){}
+      };
+      requestAnimationFrame(collapseAncestors);
+      [400,1200,2500].forEach(function(t){ setTimeout(collapseAncestors, t); });
+      window.addEventListener('resize', collapseAncestors, {passive:true});
 
       // nav scrolled state (scoped to shadow root)
       var nav = root.getElementById('nav');
