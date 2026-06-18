@@ -101,7 +101,7 @@
   .logo .mark{width:24px;height:24px;border-radius:7px;border:1.5px solid var(--gold);
     display:grid;place-items:center;font-size:.7rem;}
   /* Fixed home button (top-right) — mirrors the header logo mark; used in the Wix embed where the nav is stripped */
-  .home-mark{position:fixed;top:18px;right:18px;z-index:200;width:42px;height:42px;
+  .home-mark{position:fixed;top:18px;left:18px;z-index:200;width:42px;height:42px;
     border-radius:11px;border:1.5px solid var(--gold);color:var(--gold);
     font-weight:800;font-size:1.05rem;letter-spacing:.02em;text-decoration:none;
     display:grid;place-items:center;background:rgba(6,25,56,.55);
