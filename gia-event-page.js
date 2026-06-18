@@ -438,7 +438,7 @@
       <p class="turn">So here's where we promise to do better.</p>
     </div>
     <div class="reel tension-reel" data-reel="The why · founder reel" data-video="https://video.wixstatic.com/video/111174_7d1c4ed6ad6543f990962674be4401a3/1080p/mp4/file.mp4">
-      <img class="still" src="https://static.wixstatic.com/media/111174_84b217877e0043e9a3e11fd037af7397~mv2.jpg" alt="The why">
+      <img class="still" src="https://static.wixstatic.com/media/111174_75ea73f06b7843dca2f44c3ea1f3c3f5~mv2.jpg" alt="The why">
       <div class="grad"></div>
       <span class="dur">Reel · 1:00</span>
       <div class="play"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></div>
