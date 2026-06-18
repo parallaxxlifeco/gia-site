@@ -6,7 +6,7 @@
 
   var CSS = `
   /* ===================== BRAND TOKENS ===================== */
-  :root{
+  :host{
     --navy:#061938;
     --navy-card:#0D2350;
     --navy-deep:#04122B;
