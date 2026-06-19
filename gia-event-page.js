@@ -477,23 +477,23 @@
     <div class="eyebrow"><span class="label">Human Experience Shared</span><span class="rule"></span></div>
 
     <div class="spk-reels">
-      <div class="reel headline" data-reel="HEADLINE reel · 1:20" data-video="https://video.wixstatic.com/video/111174_fc2501f1178542ac9528a5318387144c/1080p/mp4/file.mp4">
-        <video class="still" src="https://video.wixstatic.com/video/111174_fc2501f1178542ac9528a5318387144c/1080p/mp4/file.mp4#t=0.5" preload="metadata" muted playsinline></video>
+      <div class="reel headline" data-reel="HEADLINE reel · 1:20" data-video="https://video.wixstatic.com/video/111174_35afad8066264651b916f3b264bc5b91/1080p/mp4/file.mp4">
+        <img class="still" src="https://static.wixstatic.com/media/111174_9de0af62649d41c9bed58e85066c7884~mv2.png" alt="Grace Yeo, Headline Speaker">
         <div class="grad"></div>
         <span class="toptag pill">Headline</span>
         <span class="dur">Reel · 1:20</span>
         <div class="taste">A taste of the stage</div>
         <div class="play"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></div>
-        <div class="cap"><div class="nm">Headline speaker</div></div>
+        <div class="cap"><div class="nm">Grace Yeo</div></div>
       </div>
       <div class="reel" data-reel="FEATURED reel · 0:48" data-video="https://video.wixstatic.com/video/111174_26984c1da8264cba921f34017b2e81db/1080p/mp4/file.mp4">
-        <video class="still" src="https://video.wixstatic.com/video/111174_26984c1da8264cba921f34017b2e81db/1080p/mp4/file.mp4#t=0.5" preload="metadata" muted playsinline></video>
+        <img class="still" src="https://static.wixstatic.com/media/111174_40b28ab85c7343ca9f33671236a8130a~mv2.png" alt="Mike Mataraza, Featured Speaker">
         <div class="grad"></div>
         <span class="toptag pill">Featured</span>
         <span class="dur">Reel · 0:48</span>
         <div class="taste">A taste of the stage</div>
         <div class="play"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></div>
-        <div class="cap"><div class="nm">Featured speaker</div></div>
+        <div class="cap"><div class="nm">Mike Mataraza</div></div>
       </div>
     </div>
     <p class="spk-note">We reveal the lineup closer to event night. Every speaker is intentionally selected. Come for the speakers, return because of the full experience.</p>
