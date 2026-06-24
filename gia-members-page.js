@@ -352,6 +352,8 @@
   .foot-social a{color:var(--body);opacity:.82;font-size:.9rem;font-weight:600;transition:opacity .2s,color .2s}
   .foot-social a:hover{opacity:1;color:var(--gold)}
   .foot-bottom{display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap;padding-top:28px;border-top:1px solid rgba(177,191,215,.12);color:var(--steel);font-size:.84rem}
+@media(max-width:880px){.nav-item:hover .nav-drop,.nav-item:focus-within .nav-drop{transform:none !important}}
+
 
   @media (max-width: 600px){
     footer.site{padding-block:44px 28px}
