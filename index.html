@@ -22,13 +22,15 @@
     <a href="?page=event">Event</a>
     <a href="?page=about">About</a>
     <a href="?page=partners">Partners</a>
+    <a href="?page=founders">Founders</a>
   </nav>
   <div id="mount"></div>
   <script>
     var pages = {
       event:    { tag:'gia-event-page',    src:'gia-event-page.js'    },
       about:    { tag:'gia-about-page',    src:'gia-about-page.js'    },
-      partners: { tag:'gia-partners-page', src:'gia-partners-page.js' }
+      partners: { tag:'gia-partners-page', src:'gia-partners-page.js' },
+      founders: { tag:'gia-founders-breakfast-page', src:'gia-founders-breakfast-page.js' }
     };
     var key = new URLSearchParams(location.search).get('page');
     if (!pages[key]) key = 'event';                 // default keeps root = event page
