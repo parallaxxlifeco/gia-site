@@ -504,11 +504,11 @@
     .founders p{margin:18px 0 22px}
     footer{padding-block:44px 28px}
     .foot-top{gap:30px;margin-bottom:34px}
-    .foot-col h4{font-size:.66rem;margin-bottom:12px}
-    .foot-col a{font-size:.82rem;margin-bottom:9px}
-    .foot-brand .lead{font-size:.82rem}
-    .foot-social a{font-size:.8rem}
-    .foot-bottom{font-size:.74rem}
+    .foot-col h4{font-size:.62rem;margin-bottom:12px}
+    .foot-col a{font-size:.76rem;margin-bottom:9px}
+    .foot-brand .lead{font-size:.76rem}
+    .foot-social a{font-size:.76rem}
+    .foot-bottom{font-size:.7rem}
   }
 
   @media(prefers-reduced-motion:reduce){
