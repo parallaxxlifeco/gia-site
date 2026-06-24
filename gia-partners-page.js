@@ -96,10 +96,11 @@
     .menu-btn span{ display:block; width:24px; height:2px; background:var(--body); border-radius:2px; }
     @media(max-width:880px){
       header.nav{ background:rgba(6,25,56,.94); backdrop-filter:blur(12px); -webkit-backdrop-filter:blur(12px); border-bottom:1px solid rgba(177,191,215,.12); }
-      .nav-inner{ padding:10px var(--gutter); }
-      .logo{ font-size:1rem; }
+      .nav-inner{ padding:10px 16px; gap:10px; min-width:0; }
+      .logo{ font-size:1rem; min-width:0; flex-shrink:1; }
       .logo .mark{ width:26px; height:26px; font-size:.85rem; }
-      .nav-cta .btn{ padding:.62em 1.05em; font-size:.82rem; }
+      .nav-cta{ gap:10px; flex-shrink:0; }
+      .nav-cta .btn{ padding:.6em .95em; font-size:.8rem; }
       .nav-links{ display:none; position:absolute; top:100%; left:0; right:0; flex-direction:column; align-items:stretch; gap:2px; background:rgba(6,25,56,.98); backdrop-filter:blur(14px); -webkit-backdrop-filter:blur(14px); border-bottom:1px solid rgba(177,191,215,.14); padding:12px var(--gutter) 22px; }
       .nav.menu-open .nav-links{ display:flex; }
       .nav-links > a{ padding:13px 4px; font-size:1.05rem; border-bottom:1px solid rgba(177,191,215,.08); }
@@ -108,7 +109,15 @@
       .nav-item .nav-drop{ position:static; transform:none; opacity:1; visibility:visible; pointer-events:auto; background:transparent; border:none; box-shadow:none; backdrop-filter:none; min-width:0; padding:2px 0 10px 12px; margin:0; }
       .nav-item .nav-drop a{ font-size:.98rem; padding:9px 8px; }
       .nav-drop-toggle .caret{ display:none; }
-      .menu-btn{ display:flex; }
+      .menu-btn{ display:flex; padding:6px 2px; }
+    }
+    /* very small phones: shrink the bar so the hamburger never runs off-screen */
+    @media(max-width:380px){
+      .nav-inner{ padding:10px 12px; gap:8px; }
+      .logo{ font-size:.9rem; gap:.45em; }
+      .logo .mark{ width:24px; height:24px; font-size:.78rem; }
+      .nav-cta{ gap:8px; }
+      .nav-cta .btn{ padding:.55em .8em; font-size:.74rem; }
     }
 
     /* ── PAGE WRAPPER ─────────────────────────────────── */
