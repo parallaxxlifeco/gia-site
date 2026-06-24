@@ -201,10 +201,11 @@
   .menu-btn span{display:block;width:24px;height:2px;background:var(--body);border-radius:2px}
   @media(max-width:880px){
     header.nav{background:rgba(6,25,56,.94);backdrop-filter:blur(12px);border-bottom:1px solid rgba(177,191,215,.12)}
-    .nav-inner{padding:10px var(--gutter)}
-    .logo{font-size:1rem}
+    .nav-inner{padding:10px 16px;gap:10px;min-width:0}
+    .logo{font-size:1rem;min-width:0;flex-shrink:1}
     .logo .mark{width:26px;height:26px;font-size:.85rem}
-    .nav-cta .btn{padding:.62em 1.05em;font-size:.82rem}
+    .nav-cta{gap:10px;flex-shrink:0}
+    .nav-cta .btn{padding:.6em .95em;font-size:.8rem}
     .nav-links{
       display:none;
       position:absolute;top:100%;left:0;right:0;
@@ -224,7 +225,15 @@
     }
     .nav-item .nav-drop a{font-size:.98rem;padding:9px 8px}
     .nav-drop-toggle .caret{display:none}
-    .menu-btn{display:flex}
+    .menu-btn{display:flex;padding:6px 2px}
+  }
+  /* very small phones: shrink the bar so the hamburger never runs off-screen */
+  @media(max-width:380px){
+    .nav-inner{padding:10px 12px;gap:8px}
+    .logo{font-size:.9rem;gap:.45em}
+    .logo .mark{width:24px;height:24px;font-size:.78rem}
+    .nav-cta{gap:8px}
+    .nav-cta .btn{padding:.55em .8em;font-size:.74rem}
   }
 
   /* ---------- HERO (about) ---------- */
@@ -333,6 +342,8 @@
   .foot-social a{color:var(--body);opacity:.82;font-size:.9rem;font-weight:600;transition:opacity .2s,color .2s}
   .foot-social a:hover{opacity:1;color:var(--gold)}
   .foot-bottom{display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap;padding-top:28px;border-top:1px solid rgba(177,191,215,.12);color:var(--steel);font-size:.84rem}
+@media(max-width:880px){.nav-item:hover .nav-drop,.nav-item:focus-within .nav-drop{transform:none !important}}
+
 @media(max-width:600px){
   .foot-col h4{font-size:.62rem;margin-bottom:12px}
   .foot-col a{font-size:.76rem;margin-bottom:9px}

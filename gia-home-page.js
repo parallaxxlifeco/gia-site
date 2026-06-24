@@ -275,6 +275,7 @@
       background:transparent;border:none;box-shadow:none;backdrop-filter:none;
       min-width:0;padding:2px 0 10px 12px;margin:0;
     }
+    .nav-item:hover .nav-drop,.nav-item:focus-within .nav-drop{transform:none}
     .nav-item .nav-drop a{font-size:.98rem;padding:9px 8px}
     .nav-drop-toggle .caret{display:none}
     .menu-btn{display:flex}
@@ -835,37 +836,22 @@
 </footer>
 
 `;
-  if (!document.getElementById('gia-fonts')) {
-    var l = document.createElement('link'); l.id='gia-fonts'; l.rel='stylesheet';
-    l.href = 'https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,500;0,600;0,700;0,800;1,500&family=Caveat:wght@500;600;700&display=swap';
-    document.head.appendChild(l);
-  }
+  if (!document.getElementById('gia-fonts')) { var l=document.createElement('link'); l.id='gia-fonts'; l.rel='stylesheet'; l.href='https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,500;0,600;0,700;0,800;1,500&family=Caveat:wght@500;600;700&display=swap'; document.head.appendChild(l); }
   class GIAHomePage extends HTMLElement {
     connectedCallback(){
       if (this._mounted) return; this._mounted = true;
-      var shadow = this.attachShadow({mode:'open'});
-      shadow.innerHTML = '<style>'+CSS+'</style>'+HTML;
-      var root = shadow; var host = this;
-      root.querySelectorAll('a[href^="#"]').forEach(function(a){
-        a.addEventListener('click', function(e){
-          var id = a.getAttribute('href');
-          if (id.length > 1) { var t = root.querySelector(id); if (t){ e.preventDefault(); t.scrollIntoView({behavior:'smooth'}); } }
-        });
-      });
+      var shadow=this.attachShadow({mode:'open'}); shadow.innerHTML='<style>'+CSS+'</style>'+HTML;
+      var root=shadow; var host=this;
+      root.querySelectorAll('a[href^="#"]').forEach(function(a){ a.addEventListener('click',function(e){ var id=a.getAttribute('href'); if(id.length>1){ var t=root.querySelector(id); if(t){e.preventDefault();t.scrollIntoView({behavior:'smooth'});} } }); });
 
       var collapseAncestors = function(){
-        try{
-          var hostH = host.getBoundingClientRect().height;
-          if(hostH < 50) return;
-          var n = host.parentElement, guard = 0;
-          while(n && n !== document.body && guard++ < 14){
-            if(n.getBoundingClientRect().height > hostH + 400){ n.style.height='auto'; n.style.minHeight='0px'; }
-            n = n.parentElement;
-          }
+        try{ var hostH=host.getBoundingClientRect().height; if(hostH<50) return;
+          var n=host.parentElement,guard=0;
+          while(n&&n!==document.body&&guard++<14){ if(n.getBoundingClientRect().height>hostH+400){n.style.height='auto';n.style.minHeight='0px';} n=n.parentElement; }
         }catch(e){}
       };
       requestAnimationFrame(collapseAncestors);
-      [400,1200,2500].forEach(function(t){ setTimeout(collapseAncestors, t); });
+      [400,1200,2500].forEach(function(t){ setTimeout(collapseAncestors,t); });
       window.addEventListener('resize', collapseAncestors, {passive:true});
 
 
