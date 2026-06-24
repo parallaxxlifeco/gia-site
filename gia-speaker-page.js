@@ -21,9 +21,10 @@
     html{ scroll-behavior:smooth; }
     :host{ display:block;
       background:var(--navy-deep); color:var(--body);
-      font-family:'Montserrat',sans-serif; font-weight:400; line-height:1.55;
+      font-family:'Montserrat',sans-serif; font-size:16px; font-weight:400; line-height:1.55;
       -webkit-font-smoothing:antialiased;
     }
+    .prose p{ font-size:1rem; }
     a{ color:inherit; text-decoration:none; }
     img{ display:block; max-width:100%; }
     h1,h2,h3{ color:var(--ink); font-weight:800; line-height:1.04; letter-spacing:-.018em; text-wrap:balance; }
@@ -331,16 +332,6 @@
     footer.site .foot-social a{ color:var(--body); opacity:.82; font-size:.9rem; font-weight:600; transition:opacity .2s,color .2s; }
     footer.site .foot-social a:hover{ opacity:1; color:var(--gold); }
     footer.site .foot-bottom{ display:flex; justify-content:space-between; gap:20px; flex-wrap:wrap; padding-top:28px; border-top:1px solid rgba(177,191,215,.12); color:var(--steel); font-size:.84rem; }
-@media(max-width:880px){.nav-item:hover .nav-drop,.nav-item:focus-within .nav-drop{transform:none !important}}
-
-@media(max-width:600px){
-  .foot-col h4{font-size:.62rem;margin-bottom:12px}
-  .foot-col a{font-size:.76rem;margin-bottom:9px}
-  .foot-brand .lead{font-size:.76rem}
-  .foot-social a{font-size:.76rem}
-  .foot-bottom{font-size:.7rem}
-}
-
     footer.site .foot-col a.is-soon{ color:var(--steel); cursor:default; opacity:.75; }
     footer.site .foot-col a.is-soon:hover{ color:var(--steel); opacity:.75; }
     .soon-tag{ font-size:.56rem; letter-spacing:.12em; text-transform:uppercase; border:1px solid rgba(177,191,215,.35); border-radius:999px; padding:.12em .55em; font-weight:700; margin-left:6px; color:var(--steel); vertical-align:middle; white-space:nowrap; }
@@ -760,7 +751,6 @@
       shadow.innerHTML = '<style>'+CSS+'</style>'+HTML;
       var root = shadow;
 
-      // smooth-scroll for in-page anchors (#id) across the shadow boundary
       root.querySelectorAll('a[href^="#"]').forEach(function(a){
         a.addEventListener('click', function(e){
           var id = a.getAttribute('href');
@@ -768,7 +758,6 @@
         });
       });
 
-      // ---- collapse any oversized Wix ancestor (stops the resize/flicker loop) ----
       var collapseAncestors = function(){
         try{
           var hostH = host.getBoundingClientRect().height;
