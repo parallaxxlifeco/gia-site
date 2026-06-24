@@ -473,7 +473,7 @@
       <div class="form-card">
         <iframe
           src="https://api.leadconnectorhq.com/widget/form/h9evo9TIXoDjXJ8lGOkd"
-          style="width:100%;height:434px;border:none;border-radius:10px"
+          style="width:100%;height:300px;border:none;border-radius:10px"
           id="inline-h9evo9TIXoDjXJ8lGOkd"
           data-layout="{'id':'INLINE'}"
           data-trigger-type="alwaysShow"
@@ -483,7 +483,7 @@
           data-deactivation-type="neverDeactivate"
           data-deactivation-value=""
           data-form-name="Form - Community SignUp"
-          data-height="434"
+          data-height="300"
           data-layout-iframe-id="inline-h9evo9TIXoDjXJ8lGOkd"
           data-form-id="h9evo9TIXoDjXJ8lGOkd"
           title="Form - Community SignUp">
@@ -590,6 +590,21 @@
           if (id.length > 1) { var t = root.querySelector(id); if (t){ e.preventDefault(); t.scrollIntoView({behavior:'smooth'}); } }
         });
       });
+
+      // auto-fit the GoHighLevel form iframe if it reports its height.
+      // form_embed.js can't see the shadowed iframe, so we listen for its height
+      // messages directly and resize. Falls back to the fixed height otherwise.
+      var ghForm = root.querySelector('#inline-h9evo9TIXoDjXJ8lGOkd');
+      if (ghForm) {
+        window.addEventListener('message', function(e){
+          if (e.source !== ghForm.contentWindow) return;
+          var d = e.data, h = null;
+          if (typeof d === 'string') { try { d = JSON.parse(d); } catch(_) {} }
+          if (typeof d === 'number') h = d;
+          else if (d && typeof d === 'object') h = d.height || (d.payload && d.payload.height) || (d.data && d.data.height);
+          if (h && h > 150 && h < 1200) ghForm.style.height = h + 'px';
+        });
+      }
     }
   }
   customElements.define('gia-members-page', GIAMembersPage);
