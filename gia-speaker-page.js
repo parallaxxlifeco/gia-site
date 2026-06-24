@@ -331,6 +331,14 @@
     footer.site .foot-social a{ color:var(--body); opacity:.82; font-size:.9rem; font-weight:600; transition:opacity .2s,color .2s; }
     footer.site .foot-social a:hover{ opacity:1; color:var(--gold); }
     footer.site .foot-bottom{ display:flex; justify-content:space-between; gap:20px; flex-wrap:wrap; padding-top:28px; border-top:1px solid rgba(177,191,215,.12); color:var(--steel); font-size:.84rem; }
+@media(max-width:600px){
+  .foot-col h4{font-size:.62rem;margin-bottom:12px}
+  .foot-col a{font-size:.76rem;margin-bottom:9px}
+  .foot-brand .lead{font-size:.76rem}
+  .foot-social a{font-size:.76rem}
+  .foot-bottom{font-size:.7rem}
+}
+
     footer.site .foot-col a.is-soon{ color:var(--steel); cursor:default; opacity:.75; }
     footer.site .foot-col a.is-soon:hover{ color:var(--steel); opacity:.75; }
     .soon-tag{ font-size:.56rem; letter-spacing:.12em; text-transform:uppercase; border:1px solid rgba(177,191,215,.35); border-radius:999px; padding:.12em .55em; font-weight:700; margin-left:6px; color:var(--steel); vertical-align:middle; white-space:nowrap; }

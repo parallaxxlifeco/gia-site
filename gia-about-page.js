@@ -333,6 +333,14 @@
   .foot-social a{color:var(--body);opacity:.82;font-size:.9rem;font-weight:600;transition:opacity .2s,color .2s}
   .foot-social a:hover{opacity:1;color:var(--gold)}
   .foot-bottom{display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap;padding-top:28px;border-top:1px solid rgba(177,191,215,.12);color:var(--steel);font-size:.84rem}
+@media(max-width:600px){
+  .foot-col h4{font-size:.62rem;margin-bottom:12px}
+  .foot-col a{font-size:.76rem;margin-bottom:9px}
+  .foot-brand .lead{font-size:.76rem}
+  .foot-social a{font-size:.76rem}
+  .foot-bottom{font-size:.7rem}
+}
+
 
   /* ---------- reveal (kept visible by default for reliable Wix render) ---------- */
   .reveal{opacity:0;transform:translateY(20px);transition:opacity .7s var(--ease),transform .7s var(--ease)}
