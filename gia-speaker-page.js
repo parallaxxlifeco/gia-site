@@ -344,7 +344,7 @@
       .hero{ min-height:clamp(520px,84vh,720px); }
       .hero-inner{ padding-top:104px; }
     }
-    @media(max-width:820px){ :host{ display:block; font-size:13px; } }
+    @media(max-width:820px){ :host{ display:block; font-size:13px; width:100vw; } }
   `;
   var HTML = `<!-- ─── NAV (shared site header) ─── -->
 <header class="nav nav-minimal" id="nav">
