@@ -15,7 +15,7 @@
     html{ scroll-behavior:smooth; }
     :host{ display:block;
       background:var(--navy-deep); color:var(--body);
-      font-family:'Montserrat',sans-serif; font-size:16px; font-weight:400; line-height:1.55;
+      font-family:'Montserrat',sans-serif; font-size:16px; font-weight:400; line-height:1.55; overflow-x:hidden;
       -webkit-font-smoothing:antialiased;
     }
     .prose p{ font-size:1em; }
