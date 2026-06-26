@@ -49,9 +49,9 @@
 
     /* ── shared layout + button primitives (used by nav/footer) ── */
     .wrap { max-width: var(--maxw); margin: 0 auto; padding-inline: var(--gutter); }
-    .logo { display:flex; align-items:center; gap:.6em; font-weight:800; letter-spacing:-.02em; font-size:1.12rem; color:var(--ink); text-decoration:none; }
-    .logo .mark { width:30px; height:30px; border-radius:8px; background:var(--gold); color:var(--navy); display:grid; place-items:center; font-size:.95rem; font-weight:800; flex:0 0 auto; }
-    .btn { display:inline-flex; align-items:center; gap:.6em; font-family:inherit; font-weight:700; font-size:1rem; border-radius:var(--r-pill); padding:1.05em 1.9em; cursor:pointer; border:none; text-decoration:none; transition:transform .25s var(--ease),box-shadow .25s var(--ease),background .25s var(--ease); white-space:nowrap; }
+    .logo { display:flex; align-items:center; gap:.6em; font-weight:800; letter-spacing:-.02em; font-size:1.12em; color:var(--ink); text-decoration:none; }
+    .logo .mark { width:30px; height:30px; border-radius:8px; background:var(--gold); color:var(--navy); display:grid; place-items:center; font-size:.95em; font-weight:800; flex:0 0 auto; }
+    .btn { display:inline-flex; align-items:center; gap:.6em; font-family:inherit; font-weight:700; font-size:1em; border-radius:var(--r-pill); padding:1.05em 1.9em; cursor:pointer; border:none; text-decoration:none; transition:transform .25s var(--ease),box-shadow .25s var(--ease),background .25s var(--ease); white-space:nowrap; }
     .btn .arrow { transition:transform .25s var(--ease); }
     .btn:hover .arrow { transform:translateX(4px); }
     .btn-gold { background:var(--gold); color:var(--navy); box-shadow:0 10px 30px -8px rgba(232,198,95,.5); animation:btnPulse 2.8s ease-out infinite; }
@@ -77,47 +77,47 @@
     header.nav.scrolled{ background:rgba(6,25,56,.82); backdrop-filter:blur(14px); -webkit-backdrop-filter:blur(14px); border-bottom-color:rgba(177,191,215,.14); }
     .nav-inner{ max-width:var(--maxw); margin:0 auto; padding:18px var(--gutter); display:flex; align-items:center; justify-content:space-between; gap:20px; }
     .nav-links{ display:flex; align-items:center; gap:30px; }
-    .nav-links a{ font-size:.92rem; font-weight:500; color:var(--steel); transition:color .2s; white-space:nowrap; text-decoration:none; }
+    .nav-links a{ font-size:.92em; font-weight:500; color:var(--steel); transition:color .2s; white-space:nowrap; text-decoration:none; }
     .nav-links a:hover,.nav-links a.active{ color:var(--ink); }
     .nav-item{ position:relative; display:flex; align-items:center; }
-    .nav-drop-toggle{ background:none; border:none; font-family:inherit; font-size:.92rem; font-weight:500; color:var(--steel); cursor:pointer; display:inline-flex; align-items:center; gap:.35em; transition:color .2s; white-space:nowrap; padding:0; }
+    .nav-drop-toggle{ background:none; border:none; font-family:inherit; font-size:.92em; font-weight:500; color:var(--steel); cursor:pointer; display:inline-flex; align-items:center; gap:.35em; transition:color .2s; white-space:nowrap; padding:0; }
     .nav-item:hover .nav-drop-toggle,.nav-item:focus-within .nav-drop-toggle{ color:var(--ink); }
     .nav-drop-toggle .caret{ font-size:.7em; transition:transform .25s var(--ease); }
     .nav-item:hover .nav-drop-toggle .caret,.nav-item:focus-within .nav-drop-toggle .caret{ transform:rotate(180deg); }
     .nav-drop{ position:absolute; top:100%; left:50%; transform:translateX(-50%) translateY(8px); min-width:236px; display:flex; flex-direction:column; gap:2px; background:rgba(13,35,80,.97); backdrop-filter:blur(14px); -webkit-backdrop-filter:blur(14px); border:1px solid rgba(177,191,215,.16); border-radius:14px; padding:10px; box-shadow:0 22px 54px -18px rgba(0,0,0,.65); opacity:0; visibility:hidden; pointer-events:none; transition:opacity .2s var(--ease),transform .2s var(--ease); z-index:95; }
     .nav-item:hover .nav-drop,.nav-item:focus-within .nav-drop{ opacity:1; visibility:visible; pointer-events:auto; transform:translateX(-50%) translateY(0); }
-    .nav-drop a{ display:flex; justify-content:space-between; align-items:center; gap:14px; padding:9px 12px; border-radius:9px; font-size:.9rem; font-weight:500; color:var(--body); white-space:nowrap; text-decoration:none; transition:background .2s,color .2s; }
+    .nav-drop a{ display:flex; justify-content:space-between; align-items:center; gap:14px; padding:9px 12px; border-radius:9px; font-size:.9em; font-weight:500; color:var(--body); white-space:nowrap; text-decoration:none; transition:background .2s,color .2s; }
     .nav-drop a:hover{ background:rgba(232,198,95,.1); color:var(--gold); }
     .nav-drop a.is-soon{ color:var(--steel); }
-    .nav-drop a.is-soon span{ font-size:.6rem; letter-spacing:.12em; text-transform:uppercase; border:1px solid rgba(177,191,215,.35); border-radius:999px; padding:.15em .6em; font-weight:700; }
+    .nav-drop a.is-soon span{ font-size:.6em; letter-spacing:.12em; text-transform:uppercase; border:1px solid rgba(177,191,215,.35); border-radius:999px; padding:.15em .6em; font-weight:700; }
     .nav-cta{ display:flex; align-items:center; gap:18px; }
-    .nav-cta .btn{ padding:.7em 1.3em; font-size:.9rem; }
+    .nav-cta .btn{ padding:.7em 1.3em; font-size:.9em; }
     .menu-btn{ display:none; background:none; border:none; color:var(--body); cursor:pointer; flex-direction:column; gap:5px; padding:6px; }
     .menu-btn span{ display:block; width:24px; height:2px; background:var(--body); border-radius:2px; }
     @media(max-width:880px){
       header.nav{ background:rgba(6,25,56,.94); backdrop-filter:blur(12px); -webkit-backdrop-filter:blur(12px); border-bottom:1px solid rgba(177,191,215,.12); }
       .nav-inner{ padding:10px 16px; gap:10px; min-width:0; }
-      .logo{ font-size:1rem; min-width:0; flex-shrink:1; }
-      .logo .mark{ width:26px; height:26px; font-size:.85rem; }
+      .logo{ font-size:1em; min-width:0; flex-shrink:1; }
+      .logo .mark{ width:26px; height:26px; font-size:.85em; }
       .nav-cta{ gap:10px; flex-shrink:0; }
-      .nav-cta .btn{ padding:.6em .95em; font-size:.8rem; }
+      .nav-cta .btn{ padding:.6em .95em; font-size:.8em; }
       .nav-links{ display:none; position:absolute; top:100%; left:0; right:0; flex-direction:column; align-items:stretch; gap:2px; background:rgba(6,25,56,.98); backdrop-filter:blur(14px); -webkit-backdrop-filter:blur(14px); border-bottom:1px solid rgba(177,191,215,.14); padding:12px var(--gutter) 22px; }
       .nav.menu-open .nav-links{ display:flex; }
-      .nav-links > a{ padding:13px 4px; font-size:1.05rem; border-bottom:1px solid rgba(177,191,215,.08); }
+      .nav-links > a{ padding:13px 4px; font-size:1.05em; border-bottom:1px solid rgba(177,191,215,.08); }
       .nav-item{ flex-direction:column; align-items:stretch; }
-      .nav-drop-toggle{ padding:13px 4px; font-size:1.05rem; justify-content:space-between; width:100%; }
+      .nav-drop-toggle{ padding:13px 4px; font-size:1.05em; justify-content:space-between; width:100%; }
       .nav-item .nav-drop{ position:static; transform:none; opacity:1; visibility:visible; pointer-events:auto; background:transparent; border:none; box-shadow:none; backdrop-filter:none; min-width:0; padding:2px 0 10px 12px; margin:0; }
-      .nav-item .nav-drop a{ font-size:.98rem; padding:9px 8px; }
+      .nav-item .nav-drop a{ font-size:.98em; padding:9px 8px; }
       .nav-drop-toggle .caret{ display:none; }
       .menu-btn{ display:flex; padding:6px 2px; }
     }
     /* very small phones: shrink the bar so the hamburger never runs off-screen */
     @media(max-width:380px){
       .nav-inner{ padding:10px 12px; gap:8px; }
-      .logo{ font-size:.9rem; gap:.45em; }
-      .logo .mark{ width:24px; height:24px; font-size:.78rem; }
+      .logo{ font-size:.9em; gap:.45em; }
+      .logo .mark{ width:24px; height:24px; font-size:.78em; }
       .nav-cta{ gap:8px; }
-      .nav-cta .btn{ padding:.55em .8em; font-size:.74rem; }
+      .nav-cta .btn{ padding:.55em .8em; font-size:.74em; }
     }
 
     /* ── PAGE WRAPPER ─────────────────────────────────── */
@@ -145,7 +145,7 @@
     .script-tag {
       font-family: 'Caveat', cursive;
       font-weight: 600;
-      font-size: clamp(1.5rem, 3.2vw, 2rem);
+      font-size: clamp(1.5em, 3.2vw, 2em);
       color: var(--gold);
       letter-spacing: 0.01em;
       line-height: 1;
@@ -155,7 +155,7 @@
 
     .partners-header h1 {
       font-family: 'Montserrat', sans-serif;
-      font-size: clamp(2.2rem, 6vw, 3.8rem);
+      font-size: clamp(2.2em, 6vw, 3.8em);
       font-weight: 800;
       letter-spacing: 0.12em;
       color: var(--gold);
@@ -173,14 +173,14 @@
       font-family: 'Montserrat', sans-serif;
       font-style: italic;
       font-weight: 400;
-      font-size: 1.05rem;
+      font-size: 1.05em;
       line-height: 1.6;
       color: var(--white);
       margin-bottom: 20px;
     }
 
     .manifesto p {
-      font-size: 0.875rem;
+      font-size: 0.875em;
       line-height: 1.9;
       color: var(--muted);
       margin-bottom: 6px;
@@ -289,7 +289,7 @@
 
     .partner-logo-text {
       font-family: 'Montserrat', sans-serif;
-      font-size: 1.5rem;
+      font-size: 1.5em;
       font-weight: 700;
       letter-spacing: 0.06em;
       text-transform: uppercase;
@@ -303,7 +303,7 @@
       font-family: 'Montserrat', sans-serif;
       font-style: italic;
       font-weight: 500;
-      font-size: 0.98rem;
+      font-size: 0.98em;
       color: var(--gold-light);
       line-height: 1.45;
     }
@@ -315,7 +315,7 @@
     }
 
     .partner-description {
-      font-size: 0.82rem;
+      font-size: 0.82em;
       line-height: 1.8;
       color: var(--muted);
     }
@@ -329,7 +329,7 @@
 
     .partner-offer-label {
       display: block;
-      font-size: 0.58rem;
+      font-size: 0.58em;
       font-weight: 700;
       letter-spacing: 0.18em;
       text-transform: uppercase;
@@ -338,7 +338,7 @@
     }
 
     .partner-offer-text {
-      font-size: 0.8rem;
+      font-size: 0.8em;
       color: var(--muted);
       line-height: 1.4;
     }
@@ -355,7 +355,7 @@
       display: inline-block;
       align-self: flex-start;
       padding: 10px 24px;
-      font-size: 0.68rem;
+      font-size: 0.68em;
       font-weight: 600;
       letter-spacing: 0.16em;
       text-transform: uppercase;
@@ -380,12 +380,12 @@
     }
 
     .become-partner .script-tag {
-      font-size: clamp(1.4rem, 2.8vw, 1.75rem);
+      font-size: clamp(1.4em, 2.8vw, 1.75em);
       margin-bottom: 10px;
     }
 
     .become-partner h2 {
-      font-size: 1rem;
+      font-size: 1em;
       font-weight: 700;
       letter-spacing: 0.15em;
       text-transform: uppercase;
@@ -394,7 +394,7 @@
     }
 
     .become-partner-lead {
-      font-size: 0.875rem;
+      font-size: 0.875em;
       color: var(--muted);
       line-height: 1.8;
       max-width: 500px;
@@ -419,14 +419,14 @@
 
     .bp-stat-num {
       font-family: 'Montserrat', sans-serif;
-      font-size: 1.9rem;
+      font-size: 1.9em;
       font-weight: 700;
       color: var(--gold);
       line-height: 1;
     }
 
     .bp-stat-label {
-      font-size: 0.62rem;
+      font-size: 0.62em;
       font-weight: 600;
       letter-spacing: 0.11em;
       text-transform: uppercase;
@@ -451,7 +451,7 @@
 
     .founding-tag {
       display: block;
-      font-size: 0.6rem;
+      font-size: 0.6em;
       font-weight: 700;
       letter-spacing: 0.2em;
       text-transform: uppercase;
@@ -460,7 +460,7 @@
     }
 
     .founding-offer p {
-      font-size: 0.8rem;
+      font-size: 0.8em;
       color: var(--muted);
       line-height: 1.7;
       margin: 0;
@@ -469,7 +469,7 @@
     .partner-cta-link {
       display: inline-block;
       padding: 12px 32px;
-      font-size: 0.68rem;
+      font-size: 0.68em;
       font-weight: 700;
       letter-spacing: 0.18em;
       text-transform: uppercase;
@@ -503,12 +503,12 @@
       }
 
       .partners-header h1 {
-        font-size: 2rem;
+        font-size: 2em;
         letter-spacing: 0.08em;
       }
 
       .manifesto blockquote {
-        font-size: 0.95rem;
+        font-size: 0.95em;
       }
 
       .partners-grid {
@@ -539,7 +539,7 @@
         margin-top: 0;
       }
 
-      .script-tag { font-size: 1.4rem; }
+      .script-tag { font-size: 1.4em; }
       .partner-logo-wrap { height: auto; min-height: 50px; margin-bottom: 6px; }
       .bp-stat-divider { display: none; }
       .bp-stat { padding: 10px 20px; }
@@ -549,26 +549,30 @@
     footer{ background:var(--navy-deep); border-top:1px solid rgba(177,191,215,.12); padding-block:64px 40px; font-family:'Montserrat',sans-serif; }
     footer .foot-top{ display:flex; justify-content:space-between; gap:40px; flex-wrap:wrap; margin-bottom:48px; }
     footer .foot-cols{ display:flex; gap:clamp(40px,8vw,100px); flex-wrap:wrap; }
-    footer .foot-col h4{ font-size:.74rem; letter-spacing:.16em; text-transform:uppercase; color:var(--steel); margin-bottom:18px; font-weight:700; }
-    footer .foot-col a{ display:block; color:var(--body); opacity:.82; font-size:.95rem; margin-bottom:12px; text-decoration:none; transition:opacity .2s,color .2s; }
+    footer .foot-col h4{ font-size:.74em; letter-spacing:.16em; text-transform:uppercase; color:var(--steel); margin-bottom:18px; font-weight:700; }
+    footer .foot-col a{ display:block; color:var(--body); opacity:.82; font-size:.95em; margin-bottom:12px; text-decoration:none; transition:opacity .2s,color .2s; }
     footer .foot-col a:hover{ opacity:1; color:var(--gold); }
     footer .foot-brand{ max-width:30ch; }
-    footer .foot-brand .lead{ font-size:.95rem; margin-top:16px; color:var(--steel); line-height:1.6; font-weight:400; }
+    footer .foot-brand .lead{ font-size:.95em; margin-top:16px; color:var(--steel); line-height:1.6; font-weight:400; }
     footer .foot-social{ display:flex; gap:18px; margin-top:20px; }
-    footer .foot-social a{ color:var(--body); opacity:.82; font-size:.9rem; font-weight:600; text-decoration:none; transition:opacity .2s,color .2s; }
+    footer .foot-social a{ color:var(--body); opacity:.82; font-size:.9em; font-weight:600; text-decoration:none; transition:opacity .2s,color .2s; }
     footer .foot-social a:hover{ opacity:1; color:var(--gold); }
-    footer .foot-bottom{ display:flex; justify-content:space-between; gap:20px; flex-wrap:wrap; padding-top:28px; border-top:1px solid rgba(177,191,215,.12); color:var(--steel); font-size:.84rem; }
+    footer .foot-bottom{ display:flex; justify-content:space-between; gap:20px; flex-wrap:wrap; padding-top:28px; border-top:1px solid rgba(177,191,215,.12); color:var(--steel); font-size:.84em; }
 @media(max-width:880px){.nav-item:hover .nav-drop,.nav-item:focus-within .nav-drop{transform:none !important}}
 
 @media(max-width:600px){
-  .foot-col h4{font-size:.62rem;margin-bottom:12px}
-  .foot-col a{font-size:.76rem;margin-bottom:9px}
-  .foot-brand .lead{font-size:.76rem}
-  .foot-social a{font-size:.76rem}
-  .foot-bottom{font-size:.7rem}
+  .foot-col h4{font-size:.62em;margin-bottom:12px}
+  .foot-col a{font-size:.76em;margin-bottom:9px}
+  .foot-brand .lead{font-size:.76em}
+  .foot-social a{font-size:.76em}
+  .foot-bottom{font-size:.7em}
 }
 
-  `;
+  
+/* site-wide type scale fix */
+:host{ font-size:16px; overflow-x:hidden; }
+@media(max-width:820px){ :host{ font-size:13px; } }
+`;
 
   var HTML = `<!-- ─── NAV (shared site header) ───────────────────── -->
 <header class="nav" id="nav">
