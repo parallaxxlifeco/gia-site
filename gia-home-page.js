@@ -520,6 +520,9 @@
 /* site-wide type scale fix */
 :host{ font-size:16px; overflow-x:hidden; }
 @media(max-width:820px){ :host{ font-size:13px; } }
+
+/* tighter mobile section spacing */
+@media(max-width:820px){ .sec{ padding-block:34px; } .sec-sm{ padding-block:24px; } }
 `;
   var HTML = `
 

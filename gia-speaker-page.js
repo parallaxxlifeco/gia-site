@@ -345,7 +345,10 @@
       .hero-inner{ padding-top:104px; }
     }
     @media(max-width:820px){ :host{ display:block; font-size:13px; width:100vw; } }
-  `;
+  
+/* tighter mobile section spacing */
+@media(max-width:820px){ .sec{ padding-block:34px; } .sec-sm{ padding-block:24px; } }
+`;
   var HTML = `<!-- ─── NAV (shared site header) ─── -->
 <header class="nav nav-minimal" id="nav">
   <div class="nav-inner">
