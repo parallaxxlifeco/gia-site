@@ -249,7 +249,7 @@
       <div class="script" style="margin-bottom:14px;">by GIVE IT ALL</div>
       <h1 class="h-hero">FOUNDERS <span class="gold">BREAKFAST</span></h1>
       <p class="lede sub">Connect as humans. Curate your business network.</p>
-      <div class="facts"><span>30 June</span><span class="sep">·</span><span>Amavi, Canggu</span></div>
+      <div class="facts"><span>28 July</span><span class="sep">·</span><span>Amavi, Canggu</span></div>
       <div class="hero-cta">
         <a class="btn btn-gold" href="https://checkout.giveitallevent.com/founders-breakfast-checkout" target="_blank" rel="noopener">Reserve now →</a>
         <span class="pill">Strictly limited to 20 seats</span>
@@ -319,7 +319,7 @@
 <!-- ============ 5 · THE MORNING FLOW ============ -->
 <section class="band deep speckle" id="flow">
   <div class="wrap">
-    <div class="eyebrow"><span class="label">Tuesday 30th June · how the morning flows</span><span class="rule"></span></div>
+    <div class="eyebrow"><span class="label">Tuesday 28th July · how the morning flows</span><span class="rule"></span></div>
     <div class="sched">
       <div class="slot"><div class="t">8:00 – 8:30 am</div><div class="n">Social Coffee</div></div>
       <div class="slot"><div class="t">8:30 – 10:00 am</div><div class="n">Facilitated Networking</div></div>
@@ -406,7 +406,7 @@
     <div class="wrap">
       <div class="script" style="margin-bottom:10px;">part of the GIVE IT ALL world of experiences</div>
       <h2 class="h-1" style="max-width:24ch;margin:0 auto;text-align:center;">Founders Breakfast. <span class="gold">Where your network curates itself.</span></h2>
-      <div class="facts" style="margin-top:22px;"><span>30 June</span><span class="sep">·</span><span>Amavi, Canggu</span><span class="sep">·</span><span>20 seats</span></div>
+      <div class="facts" style="margin-top:22px;"><span>28 July</span><span class="sep">·</span><span>Amavi, Canggu</span><span class="sep">·</span><span>20 seats</span></div>
       <div style="display:flex;justify-content:center;margin-top:22px;"><a class="btn btn-gold" href="https://checkout.giveitallevent.com/founders-breakfast-checkout" target="_blank" rel="noopener">Reserve now →</a></div>
       <p class="quiet">Strictly limited to 20 seats. Punctuality expected.</p>
     </div>
@@ -416,7 +416,6 @@
 <!-- ============ FOOTER ============ -->
 `;
 
-  // load the brand fonts once (document-level so the shadow content can use them)
   if (!document.getElementById('gia-fonts')) {
     var l = document.createElement('link');
     l.id = 'gia-fonts'; l.rel = 'stylesheet';
