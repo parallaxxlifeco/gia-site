@@ -167,6 +167,7 @@
   .reel:hover img.still{transform:scale(1.05);}
   .reel:hover .grad{background:linear-gradient(180deg,rgba(4,15,40,.05),rgba(4,15,40,.7));}
   .reel .still{aspect-ratio:9/16;}
+  .reel video.still{width:100%;height:100%;object-fit:cover;display:block;}
   .reel .tba{width:100%;aspect-ratio:9/16;display:grid;place-items:center;background:radial-gradient(circle at 50% 40%,#0D2350,#061938 72%);}
   .reel .tba svg{width:30%;height:30%;fill:var(--gold);opacity:.30;}
   .reel.is-soon{cursor:default;}
@@ -480,18 +481,26 @@
     <div class="eyebrow"><span class="label">Human Experience Shared</span><span class="rule"></span></div>
 
     <div class="spk-reels">
-      <div class="reel headline is-soon">
-        <div class="tba"><svg viewBox="0 0 24 24"><path d="M12 12c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm0 2c-3.33 0-10 1.67-10 5v3h20v-3c0-3.33-6.67-5-10-5z"/></svg></div>
+      <!-- ===== DEFAULT PLACEHOLDER REELS — reset to these after each event (before speakers are announced).
+           Generic "taste of the stage" reels; the cover overlay is a frame of the video itself (#t=0.5).
+             Headline default video: 111174_fc2501f1178542ac9528a5318387144c
+             Featured default video: 111174_26984c1da8264cba921f34017b2e81db
+           To ANNOUNCE a speaker: swap data-video + the <video class="still"> src to the speaker's reel,
+           and change .cap .nm from "Announcing soon" to the speaker's name. ===== -->
+      <div class="reel headline" data-reel="HEADLINE reel" data-video="https://video.wixstatic.com/video/111174_fc2501f1178542ac9528a5318387144c/1080p/mp4/file.mp4">
+        <video class="still" src="https://video.wixstatic.com/video/111174_fc2501f1178542ac9528a5318387144c/1080p/mp4/file.mp4#t=0.5" preload="metadata" muted playsinline></video>
         <div class="grad"></div>
         <span class="toptag pill">Headline</span>
-        <div class="taste">Reel revealed soon</div>
+        <div class="taste">A taste of the stage</div>
+        <div class="play"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></div>
         <div class="cap"><div class="nm">Announcing soon</div></div>
       </div>
-      <div class="reel is-soon">
-        <div class="tba"><svg viewBox="0 0 24 24"><path d="M12 12c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm0 2c-3.33 0-10 1.67-10 5v3h20v-3c0-3.33-6.67-5-10-5z"/></svg></div>
+      <div class="reel" data-reel="FEATURED reel" data-video="https://video.wixstatic.com/video/111174_26984c1da8264cba921f34017b2e81db/1080p/mp4/file.mp4">
+        <video class="still" src="https://video.wixstatic.com/video/111174_26984c1da8264cba921f34017b2e81db/1080p/mp4/file.mp4#t=0.5" preload="metadata" muted playsinline></video>
         <div class="grad"></div>
         <span class="toptag pill">Featured</span>
-        <div class="taste">Reel revealed soon</div>
+        <div class="taste">A taste of the stage</div>
+        <div class="play"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></div>
         <div class="cap"><div class="nm">Announcing soon</div></div>
       </div>
     </div>
