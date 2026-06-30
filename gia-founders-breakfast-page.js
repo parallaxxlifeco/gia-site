@@ -311,7 +311,7 @@
       </div>
     </div>
     <div class="col-photo">
-      <img src="https://static.wixstatic.com/media/111174_921e231357e2413385cd45baf61ac1d0~mv2.jpg" alt="A founder at the table" />
+      <img src="https://static.wixstatic.com/media/111174_d9b8647f47b84db6a919f7c781eec614~mv2.png" alt="Founders in conversation over coconuts by the Bali rice fields" />
     </div>
   </div>
 </section>
