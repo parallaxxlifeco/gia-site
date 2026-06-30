@@ -167,6 +167,9 @@
   .reel:hover img.still{transform:scale(1.05);}
   .reel:hover .grad{background:linear-gradient(180deg,rgba(4,15,40,.05),rgba(4,15,40,.7));}
   .reel .still{aspect-ratio:9/16;}
+  .reel .tba{width:100%;aspect-ratio:9/16;display:grid;place-items:center;background:radial-gradient(circle at 50% 40%,#0D2350,#061938 72%);}
+  .reel .tba svg{width:30%;height:30%;fill:var(--gold);opacity:.30;}
+  .reel.is-soon{cursor:default;}
   .reel.headline{border:1.5px solid var(--gold-line);box-shadow:var(--shadow);}
   .reel .play{position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);
     width:54px;height:54px;border-radius:50%;background:rgba(232,198,95,.92);
@@ -477,35 +480,31 @@
     <div class="eyebrow"><span class="label">Human Experience Shared</span><span class="rule"></span></div>
 
     <div class="spk-reels">
-      <div class="reel headline" data-reel="HEADLINE reel · 1:20" data-video="https://video.wixstatic.com/video/111174_35afad8066264651b916f3b264bc5b91/1080p/mp4/file.mp4">
-        <img class="still" src="https://static.wixstatic.com/media/111174_9de0af62649d41c9bed58e85066c7884~mv2.png" alt="Grace Yeo, Headline Speaker">
+      <div class="reel headline is-soon">
+        <div class="tba"><svg viewBox="0 0 24 24"><path d="M12 12c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm0 2c-3.33 0-10 1.67-10 5v3h20v-3c0-3.33-6.67-5-10-5z"/></svg></div>
         <div class="grad"></div>
         <span class="toptag pill">Headline</span>
-        <span class="dur">Reel · 1:20</span>
-        <div class="taste">A taste of the stage</div>
-        <div class="play"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></div>
-        <div class="cap"><div class="nm">Grace Yeo</div></div>
+        <div class="taste">Reel revealed soon</div>
+        <div class="cap"><div class="nm">Announcing soon</div></div>
       </div>
-      <div class="reel" data-reel="FEATURED reel · 0:48" data-video="https://video.wixstatic.com/video/111174_26984c1da8264cba921f34017b2e81db/1080p/mp4/file.mp4">
-        <img class="still" src="https://static.wixstatic.com/media/111174_40b28ab85c7343ca9f33671236a8130a~mv2.png" alt="Mike Mataraza, Featured Speaker">
+      <div class="reel is-soon">
+        <div class="tba"><svg viewBox="0 0 24 24"><path d="M12 12c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm0 2c-3.33 0-10 1.67-10 5v3h20v-3c0-3.33-6.67-5-10-5z"/></svg></div>
         <div class="grad"></div>
         <span class="toptag pill">Featured</span>
-        <span class="dur">Reel · 0:48</span>
-        <div class="taste">A taste of the stage</div>
-        <div class="play"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></div>
-        <div class="cap"><div class="nm">Mike Mataraza</div></div>
+        <div class="taste">Reel revealed soon</div>
+        <div class="cap"><div class="nm">Announcing soon</div></div>
       </div>
     </div>
     <p class="spk-note">We reveal the lineup closer to event night. Every speaker is intentionally selected. Come for the speakers, return because of the full experience.</p>
 
     <div class="lineup-h">And the rest of the lineup</div>
     <div class="lineup">
-      <div class="person"><div class="ph"><img class="still" src="https://static.wixstatic.com/media/111174_20d7249137ad49f88696803aa5afb85e~mv2.jpeg" alt="Sophia Fox"></div><div class="nm">Sophia Fox</div><div class="tp">Confidence After Courage</div></div>
-      <div class="person"><div class="ph"><img class="still" src="https://static.wixstatic.com/media/111174_ad6ee01cf84140ce94d02fef3043f6c6~mv2.png" alt="Rob Hangu"></div><div class="nm">Rob Hangu</div><div class="tp">One Year in Solitude</div></div>
-      <div class="person"><div class="ph"><img class="still" src="https://static.wixstatic.com/media/111174_22400b16b056425895979e7844592539~mv2.jpeg" alt="Denise Hager"></div><div class="nm">Denise Hager</div><div class="tp">One Choice</div></div>
-      <div class="person"><div class="ph"><img class="still" src="https://static.wixstatic.com/media/111174_123d14591889455e909b9345622e17ee~mv2.jpeg" alt="Ryan Nurse"></div><div class="nm">Ryan Nurse</div><div class="tp">Dying with Regrets</div></div>
-      <div class="person"><div class="ph"><img class="still" src="https://static.wixstatic.com/media/111174_664ea210a3d042bfb53efeace455c01f~mv2.jpeg" alt="Nandar Matari" style="object-position:center 42%;filter:saturate(.92) contrast(1.04) brightness(1.15);"></div><div class="nm">Nandar Matari</div><div class="tp">The Truth Within</div></div>
-      <div class="person"><div class="ph"><img class="still" src="https://static.wixstatic.com/media/111174_03e502b454154e60b5980ec4d19d61fc~mv2.jpg" alt="Wildcard speaker"></div><div class="nm">WILDCARD</div><div class="tp">Will it be you?</div></div>
+      <div class="person"><div class="ph"><div class="tba"><svg viewBox="0 0 24 24"><path d="M12 12c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm0 2c-3.33 0-10 1.67-10 5v3h20v-3c0-3.33-6.67-5-10-5z"/></svg></div></div><div class="nm">Announcing soon</div><div class="tp">&nbsp;</div></div>
+      <div class="person"><div class="ph"><div class="tba"><svg viewBox="0 0 24 24"><path d="M12 12c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm0 2c-3.33 0-10 1.67-10 5v3h20v-3c0-3.33-6.67-5-10-5z"/></svg></div></div><div class="nm">Announcing soon</div><div class="tp">&nbsp;</div></div>
+      <div class="person"><div class="ph"><div class="tba"><svg viewBox="0 0 24 24"><path d="M12 12c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm0 2c-3.33 0-10 1.67-10 5v3h20v-3c0-3.33-6.67-5-10-5z"/></svg></div></div><div class="nm">Announcing soon</div><div class="tp">&nbsp;</div></div>
+      <div class="person"><div class="ph"><div class="tba"><svg viewBox="0 0 24 24"><path d="M12 12c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm0 2c-3.33 0-10 1.67-10 5v3h20v-3c0-3.33-6.67-5-10-5z"/></svg></div></div><div class="nm">Announcing soon</div><div class="tp">&nbsp;</div></div>
+      <div class="person"><div class="ph"><div class="tba"><svg viewBox="0 0 24 24"><path d="M12 12c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm0 2c-3.33 0-10 1.67-10 5v3h20v-3c0-3.33-6.67-5-10-5z"/></svg></div></div><div class="nm">Announcing soon</div><div class="tp">&nbsp;</div></div>
+      <div class="person"><div class="ph"><div class="tba"><svg viewBox="0 0 24 24"><path d="M12 12c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm0 2c-3.33 0-10 1.67-10 5v3h20v-3c0-3.33-6.67-5-10-5z"/></svg></div></div><div class="nm">Announcing soon</div><div class="tp">&nbsp;</div></div>
     </div>
   </div>
 </section>
