@@ -726,11 +726,6 @@
 </section>
 
 <!-- ============ FOOTER ============ -->
-<div style="text-align:center;padding:28px 20px 32px;font-size:.72rem;letter-spacing:.02em;opacity:.5;">
-  <a href="https://www.giveitallevent.com/privacy-policy" style="color:var(--ink-2);border-bottom:1px solid rgba(232,198,95,.3);padding-bottom:1px;">Privacy Policy</a>
-  <span style="margin:0 10px;">&middot;</span>
-  <a href="https://www.giveitallevent.com/refund-policy" style="color:var(--ink-2);border-bottom:1px solid rgba(232,198,95,.3);padding-bottom:1px;">Refund Policy</a>
-</div>
 
 
 <!-- ============ LIGHTBOX ============ -->
@@ -777,6 +772,12 @@ const CONFIG = {
   price: { early:20, full:25, currency:"$" },
   reveal:"Jul 22",
   links: { tickets:"#", virtual:"#", drive:"#", members:"#" },
+
+  /* Checkout (GoHighLevel order form). During the early-bird window the timer
+     appends ?coupon=<ebCoupon> to auto-apply the discount; after early-bird it
+     drops the coupon and buttons point at the plain (full-price) URL. */
+  checkout: "https://checkout.giveitallevent.com/give-it-all-bali-booking",
+  ebCoupon: "EARLYBIRD5OFF",
 
   /* ===== TIMERS — the ONLY two dates you change each event =====
      Keep the +08:00 so the deadline is read in Bali time for every visitor.
@@ -901,12 +902,17 @@ root.querySelectorAll('.reel').forEach(r=>{
     if (!eb.done){
       if(heroLine)    heroLine.innerHTML = 'Early-bird ends in <b>' + compact(eb) + '</b>';
       if(ebPriceWrap){ ebPriceWrap.style.display=''; ebPriceWrap.innerHTML = 'Early-bird ends in <b>' + full(eb) + '</b>'; }
+      /* early-bird live: auto-apply the coupon at checkout */
+      const ebUrl = CONFIG.checkout + '?coupon=' + encodeURIComponent(CONFIG.ebCoupon);
+      goldCtas.forEach(b=>{ b.href = ebUrl; });
     } else {
       if(priceNow) priceNow.textContent = CONFIG.price.currency + CONFIG.price.full;   // $25
       if(ebTag)    ebTag.textContent    = 'Standard';
       if(priceNote)priceNote.innerHTML  = 'Includes the talks, introductions, portrait, canapés &amp; a cocktail.';
       if(ebPriceWrap) ebPriceWrap.style.display = 'none';
       if(heroLine) heroLine.innerHTML = 'Tickets close in <b>' + compact(sc) + '</b>';
+      /* early-bird over: full price, no coupon */
+      goldCtas.forEach(b=>{ b.href = CONFIG.checkout; });
     }
     return true;
   }
