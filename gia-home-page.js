@@ -838,6 +838,10 @@
     </div>
     <div class="foot-bottom">
       <span>© 2026 GIVE IT ALL. All rights reserved.</span>
+      <span class="foot-legal" style="display:inline-flex;gap:18px;flex-wrap:wrap">
+        <a href="https://www.giveitallevent.com/privacy-policy" style="color:inherit;border-bottom:1px solid rgba(232,198,95,.4)">Privacy Policy</a>
+        <a href="https://www.giveitallevent.com/refund-policy" style="color:inherit;border-bottom:1px solid rgba(232,198,95,.4)">Refund Policy</a>
+      </span>
     </div>
   </div>
 </footer>
