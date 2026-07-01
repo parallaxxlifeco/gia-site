@@ -414,6 +414,11 @@
 </section>
 
 <!-- ============ FOOTER ============ -->
+<div style="text-align:center;padding:28px 20px 32px;font-size:.72rem;letter-spacing:.02em;opacity:.5;">
+  <a href="https://www.giveitallevent.com/privacy-policy" style="color:var(--ink-2);border-bottom:1px solid rgba(232,198,95,.3);padding-bottom:1px;">Privacy Policy</a>
+  <span style="margin:0 10px;">&middot;</span>
+  <a href="https://www.giveitallevent.com/refund-policy" style="color:var(--ink-2);border-bottom:1px solid rgba(232,198,95,.3);padding-bottom:1px;">Refund Policy</a>
+</div>
 `;
 
   if (!document.getElementById('gia-fonts')) {
