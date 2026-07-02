@@ -553,7 +553,7 @@
       <div class="shot"><img class="still" src="https://static.wixstatic.com/media/111174_7e9d01dc29bd49bb943f4bceae879d61~mv2.jpg" alt="A moment of giving"></div>
       <div class="shot"><img class="still" src="https://static.wixstatic.com/media/111174_b513232ca5e847d381bba7f1fbb9bb41~mv2.jpg" alt="The room, alive"></div>
     </div>
-    <a class="btn btn-ghost btn-sm" href="https://1drv.ms/f/c/b2b7d4f15ca7f66b/IgA1H1ikkocFQp_vjCuO9yEEAW0RDs__JW-g7eMpi7rbME0?e=ayAoSb" target="_blank" rel="noopener" style="margin-top:8px;">See the full gallery →</a>
+    <a class="btn btn-ghost btn-sm" href="https://drive.google.com/drive/folders/1fQuOUzXIcnKJyY1F_TDJCtmmXqPZIMad?usp=sharing" target="_blank" rel="noopener" style="margin-top:8px;">See the full gallery →</a>
   </div>
 </section>
 
