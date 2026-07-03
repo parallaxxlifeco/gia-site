@@ -134,7 +134,7 @@
   .player-body p{margin-top:10px;color:var(--steel);font-size:.98rem;max-width:64ch}
   .pb-actions{margin-top:18px;display:flex;gap:12px;flex-wrap:wrap;align-items:center}
   .pb-note{font-size:.8rem;color:var(--steel);opacity:.85}
-  .lockwrap{position:absolute;inset:0;z-index:4;display:none;place-items:center;text-align:center;padding:24px;background:rgba(4,18,42,.86);backdrop-filter:blur(6px)}
+  .lockwrap{position:absolute;inset:0;z-index:4;display:none;place-items:center;text-align:center;padding:24px;background:linear-gradient(180deg,rgba(4,18,42,.35),rgba(4,18,42,.62));backdrop-filter:blur(1.5px);text-shadow:0 2px 14px rgba(0,0,0,.6)}
   .lockwrap.on{display:grid}
   .lockwrap .lk-ico{width:52px;height:52px;color:var(--gold);margin:0 auto 14px}
   .lockwrap h3{font-size:clamp(1.2rem,2.2vw,1.6rem);color:var(--ink);font-weight:800;max-width:24ch;margin:0 auto}
@@ -222,7 +222,7 @@
       <div class="series-head">
         <span class="eyebrow">The Speaker Series</span>
         <h1>You've got a story <span class="hl">worth sharing</span></h1>
-        <p>Register free to unlock the intro and see exactly what's inside the 5 part series that gets you stage-ready. No experience needed.</p>
+        <p>Register free to watch the intro and see what's inside the 5 part series that gets you stage-ready. No experience needed.</p>
       </div>
 
       <div class="series-grid">
@@ -270,7 +270,7 @@
           </div>
 
           <div class="rail-cta">
-            <p><b>All 5 videos locked.</b> Register free to unlock the intro and start the series.</p>
+            <p><b>All 5 videos locked.</b> Register free to watch the intro.</p>
             <button type="button" class="btn btn-gold js-reg">Register free to unlock <span class="arrow">&#8594;</span></button>
           </div>
         </aside>
@@ -284,8 +284,8 @@
             <div class="lockwrap on" id="lockwrap">
               <div>
                 <svg class="lk-ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="4" y="11" width="16" height="9" rx="2"/><path d="M8 11V8a4 4 0 0 1 8 0v3"/></svg>
-                <h3 id="lockTitle">Register to unlock the series</h3>
-                <p id="lockDesc">Enter your email to watch the intro free and open the full 5 part series.</p>
+                <h3 id="lockTitle">Register to watch the intro</h3>
+                <p id="lockDesc">Enter your email and we'll take you straight to the free intro.</p>
                 <button type="button" class="btn btn-gold js-reg">Register free to unlock <span class="arrow">&#8594;</span></button>
               </div>
             </div>
@@ -293,7 +293,7 @@
           <div class="player-body">
             <div class="pb-num" id="pbNum">Module 0 &middot; Introduction</div>
             <h2 id="pbTitle">Your Story Matters</h2>
-            <p id="pbDesc">Why your story is worth telling, and the permission to finally say yes. Register free to watch it and unlock what comes next.</p>
+            <p id="pbDesc">Why your story is worth telling, and the permission to finally say yes. Register free to watch it.</p>
           </div>
         </div>
       </div>
@@ -318,7 +318,7 @@
       <div class="inner">
         <span class="eyebrow">Your stage is waiting</span>
         <h2>Ready to unlock the <span class="hl">full series?</span></h2>
-        <p>Register free to unlock the intro and follow the 5 part series that gets you stage-ready.</p>
+        <p>Register free to watch the intro that kicks off the 5 part series.</p>
         <button type="button" class="btn btn-gold js-reg">Register free to unlock <span class="arrow">&#8594;</span></button>
       </div>
     </div>
@@ -326,12 +326,12 @@
 
   <div class="reg-modal" id="regModal" aria-hidden="true">
     <div class="reg-backdrop" data-close></div>
-    <div class="reg-card" role="dialog" aria-modal="true" aria-label="Register to unlock the series">
+    <div class="reg-card" role="dialog" aria-modal="true" aria-label="Register to watch the free intro">
       <button type="button" class="reg-close" data-close aria-label="Close">&times;</button>
       <div class="reg-head">
-        <span class="eyebrow">Unlock the series</span>
+        <span class="eyebrow">The Speaker Series</span>
         <h3>Enter your email to watch free</h3>
-        <p>We'll send you straight to the intro and open the full 5 part series.</p>
+        <p>We'll send you straight to the free intro.</p>
       </div>
       <div class="reg-form">
         <!-- GHL FORM: Speaker Series Opt-in. On Submit redirects to https://www.giveitallevent.com/talk-series?access=granted (set in GHL). -->
@@ -423,7 +423,7 @@
 
       // series teaser: every module locked, preview swaps as you browse
       var modules={
-        intro:{num:'Module 0 &middot; Introduction',title:'Your Story Matters',summary:'Why your story is worth telling, and the permission to finally say yes. Register free to watch it and unlock what comes next.',thumb:'https://static.wixstatic.com/media/111174_d9640c4c66904567a634f847ec653bb1~mv2.png'},
+        intro:{num:'Module 0 &middot; Introduction',title:'Your Story Matters',summary:'Why your story is worth telling, and the permission to finally say yes. Register free to watch it.',thumb:'https://static.wixstatic.com/media/111174_d9640c4c66904567a634f847ec653bb1~mv2.png'},
         m1:{num:'Module 1 &middot; The Shape of Your Talk',title:'Find Your Story',summary:'Find your seed, shape it through the hero\'s journey, and walk away with the bones of your five-minute talk.',thumb:'https://static.wixstatic.com/media/111174_c3e3358498474b94b0e0d60e648b5400~mv2.png'},
         m2:{num:'Module 2 &middot; How to Actually Deliver It',title:'Don\'t Memorise It',summary:'How to practise your talk so it stays alive, chunked, felt, and never scripted.',thumb:'https://static.wixstatic.com/media/111174_8e28c45a6418440dbadfa11a0381be40~mv2.png'},
         m3:{num:'Module 3 &middot; What to Do With the Nerves',title:'Getting Out of Your Head',summary:'What to do with the nerves, and the one reframe that makes them disappear.',thumb:'https://static.wixstatic.com/media/111174_0611f88a378048bca5fb9faa9db85b4a~mv2.png'},
