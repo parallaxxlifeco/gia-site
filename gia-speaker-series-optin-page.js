@@ -119,6 +119,7 @@
 
   .player-card{background:var(--navy-card);border:1px solid rgba(177,191,215,.14);border-radius:var(--r-card);overflow:hidden}
   .player{position:relative;aspect-ratio:16/9;background:#04122A}
+  @media(max-width:600px){.player{min-height:420px}}
   .player video,.player iframe{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;border:0}
   .player .poster{position:absolute;inset:0;cursor:pointer}
   .player .poster img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}

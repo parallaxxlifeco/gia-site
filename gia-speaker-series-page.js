@@ -119,6 +119,7 @@
 
   .player-card{background:var(--navy-card);border:1px solid rgba(177,191,215,.14);border-radius:var(--r-card);overflow:hidden}
   .player{position:relative;aspect-ratio:16/9;background:#04122A}
+  @media(max-width:600px){.player.locked-tall{min-height:420px}}
   .player video,.player iframe{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;border:0}
   .player .poster{position:absolute;inset:0;cursor:pointer}
   .player .poster img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
@@ -433,10 +434,12 @@
           pbNum.innerHTML=m.num; pbTitle.innerHTML=m.title;
           if(m.locked){
             lockwrap.classList.add('on'); playbtn.style.display='none';
+            player.classList.add('locked-tall');
             lockTitle.textContent=m.title;
             pbDesc.textContent=m.summary;
           }else{
             lockwrap.classList.remove('on'); playbtn.style.display='grid';
+            player.classList.remove('locked-tall');
             pbDesc.textContent=m.desc;
           }
           player.scrollIntoView({behavior:'smooth',block:'center'});
