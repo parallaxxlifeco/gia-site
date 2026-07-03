@@ -57,7 +57,8 @@
   .menu-btn span{display:block;width:24px;height:2px;background:var(--body);border-radius:2px}
   @media(max-width:880px){
     header.nav{background:rgba(6,25,56,.94);backdrop-filter:blur(12px);border-bottom:1px solid rgba(177,191,215,.12)}
-    .nav-inner{padding:10px var(--gutter)}
+    .nav-inner{padding:10px var(--gutter);gap:12px}
+    .nav-cta{gap:12px}
     .nav-cta .btn{padding:.62em 1.05em;font-size:.82rem}
     .nav-links{display:none;position:absolute;top:100%;left:0;right:0;flex-direction:column;align-items:stretch;gap:2px;background:rgba(6,25,56,.98);backdrop-filter:blur(14px);border-bottom:1px solid rgba(177,191,215,.14);padding:12px var(--gutter) 22px}
     .nav.menu-open .nav-links{display:flex}
@@ -78,6 +79,7 @@
   .series-head h1 .hl{color:var(--gold)}
   .series-head p{margin-top:16px;font-size:clamp(1rem,1.5vw,1.15rem);color:var(--steel);max-width:60ch}
   .series-grid{display:grid;grid-template-columns:360px 1fr;gap:clamp(20px,2.4vw,34px);align-items:start}
+  .series-grid>*{min-width:0}
   @media(max-width:940px){.series-grid{grid-template-columns:1fr}}
 
   .rail{background:var(--navy-card);border:1px solid rgba(177,191,215,.14);border-radius:var(--r-card);padding:18px;position:sticky;top:92px}
@@ -265,7 +267,7 @@
             <div class="poster" id="poster">
               <img class="thumb" src="https://static.wixstatic.com/media/111174_d9640c4c66904567a634f847ec653bb1~mv2.png" alt="Your Story Matters">
               <video class="still" muted playsinline preload="none" style="display:none"
-                     src="https://video.wixstatic.com/video/111174_fc2501f1178542ac9528a5318387144c/1080p/mp4/file.mp4"></video>
+                     src="https://video.wixstatic.com/video/111174_45b314fe6ec14e7cb883c5fc72b2c304/1080p/mp4/file.mp4"></video>
             </div>
             <div class="playbtn" id="playbtn"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></div>
             <div class="lockwrap" id="lockwrap">
@@ -365,6 +367,20 @@
   class GIASpeakerSeriesPage extends HTMLElement {
     connectedCallback(){
       if (this._mounted) return; this._mounted = true;
+
+      // ---- access gate: require email registration (soft gate) ----
+      // FLIP GATE_ENABLED to true once the teaser page at OPTIN_URL is live on Wix.
+      // While false, the page is open to everyone (video plays, modules still behind speaker registration).
+      var GATE_ENABLED=false;
+      var OPTIN_URL='https://www.giveitallevent.com/talk-series-locked';
+      try{
+        var _p=new URLSearchParams(location.search);
+        var _live=/giveitallevent\.com/.test(location.hostname); // only enforce on the live domain (keeps previews open)
+        if(_p.get('access')==='granted'){ try{localStorage.setItem('gia_series_access','1');}catch(e){} }
+        var _ok=(_p.get('access')==='granted')||(function(){try{return localStorage.getItem('gia_series_access')==='1';}catch(e){return false;}})();
+        if(GATE_ENABLED && _live && !_ok){ location.replace(OPTIN_URL); return; }
+      }catch(e){}
+
       var shadow=this.attachShadow({mode:'open'}); shadow.innerHTML='<style>'+CSS+'</style>'+HTML;
       var root=shadow; var host=this;
 
