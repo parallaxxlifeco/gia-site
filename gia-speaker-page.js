@@ -582,7 +582,7 @@
         <div class="price-incl">Package includes</div>
         <ul>
           <li><span class="ic">✓</span> Event ticket + drink</li>
-          <li><span class="ic">✓</span> 5-minute speaking slot</li>
+          <li><span class="ic">✓</span> 5-minute speaking slot</li><li><span class="ic">✓</span> 5-Part Stage Prep Video Series</li>
           <li><span class="ic">✓</span> Pro photos &amp; B-roll</li>
           <li><span class="ic">✓</span> Full editing of your talk</li>
           <li><span class="ic">✓</span> 4 speaking shorts reels</li>
