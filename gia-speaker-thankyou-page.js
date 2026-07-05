@@ -30,7 +30,7 @@
     /* ── shared primitives ── */
     .wrap{ max-width:var(--maxw); margin:0 auto; padding-inline:var(--gutter); }
     .read{ max-width:var(--maxw-read); margin-inline:auto; }
-    .sec{ padding-block:clamp(50px,7vh,92px); }
+    .sec{ padding-block:clamp(30px,4vh,52px); }
     .sec-sm{ padding-block:clamp(38px,5vh,60px); }
     .band-navy{ background:var(--navy); }
     .band-deep{ background:var(--navy-deep); }
@@ -112,7 +112,7 @@
     }
 
     /* ── thank-you page bits ── */
-    .ty-hero{ padding-top:clamp(128px,20vh,180px); }
+    .ty-hero{ padding-top:clamp(92px,12vh,120px); }
     .ty-hero .eyebrow{ text-shadow:0 1px 16px rgba(3,8,20,.55); }
     .ty-hero h1{ font-size:clamp(2em,4.4vw,3.4em); margin:.28em auto .5em; max-width:20ch; }
     .ty-lead{ font-size:clamp(1.02em,1.5vw,1.18em); color:var(--ink); max-width:52ch; margin-inline:auto; }
@@ -147,7 +147,7 @@
     /* ── responsive ── */
     @media(max-width:820px){ body{ font-size:13px; width:100vw; } }
     /* tighter mobile section spacing */
-    @media(max-width:820px){ .sec{ padding-block:34px; } .sec-sm{ padding-block:24px; } }
+    @media(max-width:820px){ .sec{ padding-block:22px; } .sec-sm{ padding-block:18px; } }
   `;
   var HTML = `
 
