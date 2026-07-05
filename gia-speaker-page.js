@@ -624,7 +624,7 @@
       </div>
     </div>
 
-    <p class="price-note">Choose the package that reflects the level of value you'd love to retain from your experience at GIVE IT ALL.</p>
+    <p class="price-note">Not quite ready? That's okay.<br>5-part video series to prep you for the stage. <a href="https://www.giveitallevent.com/talk-series" target="_blank" rel="noopener" style="color:var(--gold);font-weight:600;border-bottom:1px solid rgba(232,198,95,.45)">Access Free Now</a></p>
   </div>
 </section>
 
