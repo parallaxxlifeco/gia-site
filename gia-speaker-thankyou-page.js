@@ -1,4 +1,4 @@
-/* GIVE IT ALL — Speaker Thank-you page, packaged as a Wix Custom Element.
+/* GIVE IT ALL - Speaker Thank-you page, packaged as a Wix Custom Element.
    Generated from thankyou-speaker.html. Tag name to set in Wix: <gia-speaker-thankyou-page>
    Renders in Shadow DOM so its styles never touch the rest of your Wix site. */
 (function(){
@@ -90,6 +90,7 @@
     .nav-drop a.is-soon span{ font-size:.6em; letter-spacing:.12em; text-transform:uppercase; border:1px solid rgba(177,191,215,.35); border-radius:999px; padding:.15em .6em; font-weight:700; }
     .nav-cta{ display:flex; align-items:center; gap:18px; }
     .nav-cta .btn{ padding:.7em 1.3em; font-size:.9em; }
+    .nav-mobile-cta{ display:none; }
     .menu-btn{ display:none; background:none; border:none; color:var(--body); cursor:pointer; flex-direction:column; gap:5px; padding:6px; }
     .menu-btn span{ display:block; width:24px; height:2px; background:var(--body); border-radius:2px; }
     @media(max-width:880px){
@@ -97,7 +98,8 @@
       .nav-inner{ padding:10px var(--gutter); }
       .logo{ font-size:1em; }
       .logo .mark{ width:26px; height:26px; font-size:.85em; }
-      .nav-cta .btn{ padding:.62em 1.05em; font-size:.82em; }
+      .nav-cta .btn{ display:none; }
+      .nav-mobile-cta{ display:inline-flex; align-self:flex-start; margin:14px 4px 2px; padding:.8em 1.6em; font-size:.95em; }
       .nav-links{ display:none; position:absolute; top:100%; left:0; right:0; flex-direction:column; align-items:stretch; gap:2px; background:rgba(6,25,56,.98); backdrop-filter:blur(14px); -webkit-backdrop-filter:blur(14px); border-bottom:1px solid rgba(177,191,215,.14); padding:12px var(--gutter) 22px; }
       .nav.menu-open .nav-links{ display:flex; }
       .nav-links > a{ padding:13px 4px; font-size:1.05em; border-bottom:1px solid rgba(177,191,215,.08); }
@@ -121,8 +123,8 @@
     .ty-point .label{ color:var(--gold); display:block; margin-bottom:.7em; }
     .ty-point p{ color:var(--body); font-size:.98em; line-height:1.7; }
     @media(max-width:640px){ .ty-next{ grid-template-columns:1fr; } }
-    .ty-socials{ display:flex; flex-direction:column; gap:10px; margin-top:clamp(20px,3vw,28px); }
-    .ty-socials a{ color:var(--gold); font-weight:600; font-size:1.05em; border-bottom:1px solid rgba(232,198,95,.35); align-self:center; transition:border-color .2s,color .2s; }
+    .ty-socials{ display:flex; flex-direction:row; flex-wrap:wrap; justify-content:center; gap:14px 28px; margin-top:clamp(18px,3vw,26px); }
+    .ty-socials a{ color:var(--gold); font-weight:600; font-size:1.05em; border-bottom:1px solid rgba(232,198,95,.35); transition:border-color .2s,color .2s; }
     .ty-socials a:hover{ color:var(--gold-deep); border-color:var(--gold); }
 
     /* ── FOOTER (shared) ── */
@@ -150,11 +152,30 @@
   var HTML = `
 
 
-<header class="nav nav-minimal" id="nav">
+<header class="nav" id="nav">
   <div class="nav-inner">
     <a href="https://www.giveitallevent.com" class="logo" aria-label="GIVE IT ALL home"><span class="mark">G</span> GIVE&nbsp;IT&nbsp;ALL</a>
+    <nav class="nav-links">
+      <div class="nav-item">
+        <button class="nav-drop-toggle" aria-haspopup="true" aria-expanded="false">Experiences <span class="caret">▾</span></button>
+        <div class="nav-drop">
+          <a href="https://www.giveitallevent.com/bali-speaker-networking-event">Speaker &amp; Networking Event</a>
+          <a href="https://www.giveitallevent.com/founders-breakfast-bali" target="_blank" rel="noopener">Founders Breakfast</a>
+          <a href="https://www.giveitallevent.com/speak-at-give-it-all" target="_blank" rel="noopener">Speak on Stage</a>
+          <a href="https://www.parallaxxtransformations.com/the-reconnected-man" target="_blank" rel="noopener">Reconnected Man</a>
+          <a href="https://www.parallaxxtransformations.com" target="_blank" rel="noopener">Parallaxx Transformations</a>
+          <a href="#" class="is-soon">Virtual Membership <span>soon</span></a>
+        </div>
+      </div>
+      <a href="https://www.giveitallevent.com/speak-at-give-it-all" target="_blank" rel="noopener">Speak</a>
+      <a href="https://www.giveitallevent.com/members" target="_blank" rel="noopener">Members</a>
+      <a href="https://www.giveitallevent.com/partners" target="_blank" rel="noopener">Partners</a>
+      <a href="https://www.giveitallevent.com/about-us" target="_blank" rel="noopener">About</a>
+      <a href="https://www.giveitallevent.com/bali-speaker-networking-event" class="btn btn-gold nav-mobile-cta">Get tickets <span class="arrow">→</span></a>
+    </nav>
     <div class="nav-cta">
-      <a href="https://reconnect.parallaxxtransformations.com/choose-your-speaker-experience-page" target="_blank" rel="noopener" class="btn btn-gold">Apply now <span class="arrow">→</span></a>
+      <a href="https://www.giveitallevent.com/bali-speaker-networking-event" class="btn btn-gold">Get tickets <span class="arrow">→</span></a>
+      <button class="menu-btn" aria-label="Menu"><span></span><span></span><span></span></button>
     </div>
   </div>
 </header>
@@ -163,8 +184,7 @@
 <section class="sec band-navy speckle ty-hero">
   <div class="wrap" style="text-align:center">
     <span class="eyebrow">you're in</span>
-    <h1>Thank you — your application's <span class="accent">received</span>.</h1>
-    <p class="lead ty-lead">You've taken the step and we've got it. Here's what happens next — and something to get you moving while you wait.</p>
+    <h1>Thank you. We've got your <span class="accent">application</span>.</h1>
   </div>
 </section>
 
@@ -172,36 +192,22 @@
 <section class="sec band-deep speckle">
   <div class="wrap" style="text-align:center">
     <span class="eyebrow">your head start</span>
-    <h2 class="ty-h2">Start prepping for the stage — <span class="accent">free</span>.</h2>
-    <p class="lead ty-copy" style="max-width:54ch; margin-top:1em">A 5-part video series to help you find the story that's yours, shape it, and step up ready. Do the work now, man, so when your date lands you walk on knowing exactly what you're there to say.</p>
-    <div style="margin-top:30px">
-      <a href="https://www.giveitallevent.com/talk-series" target="_blank" rel="noopener" class="btn btn-gold">Access the Talk Series free <span class="arrow">→</span></a>
-    </div>
+    <h2 class="ty-h2">Your free 5 part Stage Prep series is on its <span class="accent">way</span>.</h2>
+    <p class="lead ty-copy" style="max-width:52ch; margin-top:1em">Check your inbox now, and your spam / promotions folder, for your access link and your registration confirmation.</p>
   </div>
 </section>
 
 
 <section class="sec band-abyss speckle">
   <div class="wrap" style="text-align:center">
-    <span class="label">important</span>
-    <h2 class="ty-h2" style="margin-top:.5em">What happens next</h2>
-    <div class="ty-next">
-      <div class="ty-point">
-        <span class="label">Point A</span>
-        <p>Watch for your WhatsApp confirmation. If it doesn't come through, message <strong class="accent">+64 22 415 0389</strong> so we can check we've got your number right — and check your spam / promotions folder for the email too.</p>
-      </div>
-      <div class="ty-point">
-        <span class="label">Point B</span>
-        <p>We'll be in touch shortly with the next available event slot.</p>
-      </div>
-    </div>
+    <p class="lead" style="max-width:52ch; margin-inline:auto">You'll also get a WhatsApp confirmation. If it doesn't arrive, message <strong class="accent">+64 22 415 0389</strong>. We'll be in touch soon with your next event slot.</p>
   </div>
 </section>
 
 
 <section class="sec band-navy speckle">
   <div class="wrap" style="text-align:center">
-    <p class="lead" style="max-width:44ch; margin-inline:auto">Follow along and tag us — we love to share your moment.</p>
+    <p class="lead" style="max-width:44ch; margin-inline:auto">Follow and tag us, we love to share your moment.</p>
     <div class="ty-socials">
       <a href="https://www.instagram.com/giveitall_event" target="_blank" rel="noopener">@giveitall_event</a>
       <a href="https://www.instagram.com/daniel.lawson" target="_blank" rel="noopener">@daniel.lawson</a>
