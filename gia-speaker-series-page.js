@@ -173,6 +173,25 @@
   .foot-social a{color:var(--body);opacity:.82;font-size:.9rem;font-weight:600;transition:opacity .2s,color .2s}
   .foot-social a:hover{opacity:1;color:var(--gold)}
   .foot-bottom{display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap;padding-top:28px;border-top:1px solid rgba(177,191,215,.12);color:var(--steel);font-size:.84rem}
+  /* mobile type scale (tighter, matches the other pages) */
+  @media(max-width:600px){
+    .series{padding-top:44px}
+    .eyebrow{font-size:1.35rem}
+    .series-head h1{font-size:1.8rem;line-height:1.12}
+    .series-head p{font-size:.94rem}
+    .player-body h2{font-size:1.18rem}
+    .player-body p{font-size:.9rem}
+    .lockwrap h3{font-size:1.12rem}
+    .lockwrap p{font-size:.86rem}
+    .rail-cta p{font-size:.8rem}
+    .learn h2{font-size:1.35rem}
+    .learn .sub{font-size:.88rem}
+    .lcard h4{font-size:.94rem}
+    .lcard p{font-size:.84rem}
+    .finalcta h2{font-size:1.55rem}
+    .finalcta p{font-size:.9rem}
+    .pmeta .ptitle{font-size:.85rem}
+  }
   @media(max-width:600px){footer{padding-block:44px 28px}.foot-top{gap:30px;margin-bottom:34px}.foot-col h4{font-size:.62rem;margin-bottom:12px}.foot-col a{font-size:.76rem;margin-bottom:9px}.foot-brand .lead{font-size:.76rem}.foot-social a{font-size:.76rem}.foot-bottom{font-size:.7rem}}
   `;
 
