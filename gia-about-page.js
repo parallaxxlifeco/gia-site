@@ -333,15 +333,15 @@
   footer{background:var(--navy-deep);border-top:1px solid rgba(177,191,215,.12);padding-block:64px 40px}
   .foot-top{display:flex;justify-content:space-between;gap:40px;flex-wrap:wrap;margin-bottom:48px}
   .foot-cols{display:flex;gap:clamp(40px,8vw,100px);flex-wrap:wrap}
-  .foot-col h4{font-size:.74em;letter-spacing:.16em;text-transform:uppercase;color:var(--steel);margin-bottom:18px;font-weight:700}
-  .foot-col a{display:block;color:var(--body);opacity:.82;font-size:.95em;margin-bottom:12px;transition:opacity .2s,color .2s}
+  .foot-col h4{font-size:.64em;letter-spacing:.16em;text-transform:uppercase;color:var(--steel);margin-bottom:18px;font-weight:700}
+  .foot-col a{display:block;color:var(--body);opacity:.82;font-size:.8em;margin-bottom:12px;transition:opacity .2s,color .2s}
   .foot-col a:hover{opacity:1;color:var(--gold)}
   .foot-brand{max-width:30ch}
-  .foot-brand .lead{font-size:.95em;margin-top:16px}
+  .foot-brand .lead{font-size:.78em;margin-top:16px}
   .foot-social{display:flex;gap:18px;margin-top:20px}
-  .foot-social a{color:var(--body);opacity:.82;font-size:.9em;font-weight:600;transition:opacity .2s,color .2s}
+  .foot-social a{color:var(--body);opacity:.82;font-size:.78em;font-weight:600;transition:opacity .2s,color .2s}
   .foot-social a:hover{opacity:1;color:var(--gold)}
-  .foot-bottom{display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap;padding-top:28px;border-top:1px solid rgba(177,191,215,.12);color:var(--steel);font-size:.84em}
+  .foot-bottom{display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap;padding-top:28px;border-top:1px solid rgba(177,191,215,.12);color:var(--steel);font-size:.72em}
 @media(max-width:880px){.nav-item:hover .nav-drop,.nav-item:focus-within .nav-drop{transform:none !important}}
 
 @media(max-width:600px){
@@ -384,6 +384,8 @@
           <a href="https://www.parallaxxtransformations.com/the-reconnected-man" target="_blank" rel="noopener">Reconnected Man</a>
           <a href="https://www.parallaxxtransformations.com" target="_blank" rel="noopener">Parallaxx Transformations</a>
           <a href="#" class="is-soon">Virtual Membership <span>soon</span></a>
+          <div style="height:1px;background:rgba(177,191,215,.16);margin:6px 4px"></div>
+          <a href="https://www.giveitallevent.com/events" style="color:var(--gold)">Events calendar</a>
         </div>
       </div>
       <a href="https://www.giveitallevent.com/speak-at-give-it-all" target="_blank" rel="noopener">Speak</a>
@@ -519,6 +521,7 @@
           <a href="https://www.giveitallevent.com/founders-breakfast-bali" target="_blank" rel="noopener">Founders Breakfast</a>
           <a href="https://www.giveitallevent.com/speak-at-give-it-all" target="_blank" rel="noopener">Speak on Stage</a>
           <a href="https://www.parallaxxtransformations.com" target="_blank" rel="noopener">Parallaxx Transformations</a>
+          <a href="https://www.giveitallevent.com/events">Events calendar</a>
           <a href="#">Virtual Membership</a>
         </div>
         <div class="foot-col">

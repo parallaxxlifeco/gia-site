@@ -317,15 +317,15 @@
     footer.site{ background:var(--navy-deep); border-top:1px solid rgba(177,191,215,.12); padding-block:64px 40px; }
     footer.site .foot-top{ display:flex; justify-content:space-between; gap:40px; flex-wrap:wrap; margin-bottom:48px; }
     footer.site .foot-cols{ display:flex; gap:clamp(40px,8vw,100px); flex-wrap:wrap; }
-    footer.site .foot-col h4{ font-size:.74em; letter-spacing:.16em; text-transform:uppercase; color:var(--steel); margin-bottom:18px; font-weight:700; }
-    footer.site .foot-col a{ display:block; color:var(--body); opacity:.82; font-size:.95em; margin-bottom:12px; transition:opacity .2s,color .2s; }
+    footer.site .foot-col h4{ font-size:.64em; letter-spacing:.16em; text-transform:uppercase; color:var(--steel); margin-bottom:18px; font-weight:700; }
+    footer.site .foot-col a{ display:block; color:var(--body); opacity:.82; font-size:.8em; margin-bottom:12px; transition:opacity .2s,color .2s; }
     footer.site .foot-col a:hover{ opacity:1; color:var(--gold); }
     footer.site .foot-brand{ max-width:30ch; }
-    footer.site .foot-brand .lead{ font-size:.95em; margin-top:16px; color:var(--steel); line-height:1.6; }
+    footer.site .foot-brand .lead{ font-size:.78em; margin-top:16px; color:var(--steel); line-height:1.6; }
     footer.site .foot-social{ display:flex; gap:18px; margin-top:20px; }
-    footer.site .foot-social a{ color:var(--body); opacity:.82; font-size:.9em; font-weight:600; transition:opacity .2s,color .2s; }
+    footer.site .foot-social a{ color:var(--body); opacity:.82; font-size:.78em; font-weight:600; transition:opacity .2s,color .2s; }
     footer.site .foot-social a:hover{ opacity:1; color:var(--gold); }
-    footer.site .foot-bottom{ display:flex; justify-content:space-between; gap:20px; flex-wrap:wrap; padding-top:28px; border-top:1px solid rgba(177,191,215,.12); color:var(--steel); font-size:.84em; }
+    footer.site .foot-bottom{ display:flex; justify-content:space-between; gap:20px; flex-wrap:wrap; padding-top:28px; border-top:1px solid rgba(177,191,215,.12); color:var(--steel); font-size:.72em; }
     footer.site .foot-col a.is-soon{ color:var(--steel); cursor:default; opacity:.75; }
     footer.site .foot-col a.is-soon:hover{ color:var(--steel); opacity:.75; }
     .soon-tag{ font-size:.56em; letter-spacing:.12em; text-transform:uppercase; border:1px solid rgba(177,191,215,.35); border-radius:999px; padding:.12em .55em; font-weight:700; margin-left:6px; color:var(--steel); vertical-align:middle; white-space:nowrap; }
@@ -710,6 +710,7 @@
           <a href="https://www.giveitallevent.com/speak-at-give-it-all" target="_blank" rel="noopener">Speak on Stage</a>
           <a href="https://www.parallaxxtransformations.com" target="_blank" rel="noopener">Parallaxx Transformations</a>
           <a class="is-soon" aria-disabled="true">Virtual Membership <span class="soon-tag">soon</span></a>
+          <a href="https://www.giveitallevent.com/events">Events calendar</a>
         </div>
         <div class="foot-col">
           <h4>Our deeper world</h4>
