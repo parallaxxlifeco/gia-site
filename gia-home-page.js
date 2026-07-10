@@ -559,7 +559,7 @@
           <a href="https://www.parallaxxtransformations.com" target="_blank" rel="noopener">Parallaxx Transformations</a>
           <a href="#" class="is-soon">Virtual Membership <span>soon</span></a>
           <div style="height:1px;background:rgba(177,191,215,.16);margin:6px 4px"></div>
-          <a href="https://www.giveitallevent.com/events" style="color:var(--gold)">Events calendar</a>
+          <a href="https://www.giveitallevent.com/events-calendar" style="color:var(--gold)">Events calendar</a>
         </div>
       </div>
       <a href="https://www.giveitallevent.com/speak-at-give-it-all" target="_blank" rel="noopener">Speak</a>
@@ -729,13 +729,13 @@
   <div class="wrap">
     <div style="display:flex;align-items:baseline;justify-content:space-between;gap:16px;flex-wrap:wrap;margin-bottom:20px;">
       <h2>What's <span class="gold">coming up</span></h2>
-      <a href="https://www.giveitallevent.com/events" style="color:var(--gold);font-weight:700;font-size:.92rem;">See the full calendar →</a>
+      <a href="https://www.giveitallevent.com/events-calendar" style="color:var(--gold);font-weight:700;font-size:.92rem;">See the full calendar →</a>
     </div>
     <div id="homeEvs" style="display:flex;flex-direction:column;gap:12px;">
       <div style="color:var(--steel);padding:16px 0;">Loading…</div>
     </div>
     <div style="text-align:center;margin-top:26px;">
-      <a class="btn btn-gold" href="https://www.giveitallevent.com/events">See events calendar <span class="arrow">→</span></a>
+      <a class="btn btn-gold" href="https://www.giveitallevent.com/events-calendar">See events calendar <span class="arrow">→</span></a>
     </div>
   </div>
 </section>
@@ -903,7 +903,7 @@
           <a href="https://www.giveitallevent.com/speak-at-give-it-all" target="_blank" rel="noopener">Speak on Stage</a>
           <a href="https://www.parallaxxtransformations.com" target="_blank" rel="noopener">Parallaxx Transformations</a>
           <a href="#">Virtual Membership</a>
-          <a href="https://www.giveitallevent.com/events">Events calendar</a>
+          <a href="https://www.giveitallevent.com/events-calendar">Events calendar</a>
         </div>
         <div class="foot-col">
           <h4>Our deeper world</h4>
@@ -1019,7 +1019,7 @@
       if(t.indexOf('founders breakfast')>-1)return{l:'Book seat',u:'https://www.giveitallevent.com/founders-breakfast-bali',c:'#EFB25A'};
       if(t.indexOf('reconnected man')>-1)return{l:'Apply',u:'https://www.parallaxxtransformations.com/the-reconnected-man',c:'#6F9BD8'};
       if(t.indexOf('give it all')>-1)return{l:'Get tickets',u:'https://www.giveitallevent.com/bali-speaker-networking-event',c:'#E8C65F'};
-      return{l:'Details',u:'https://www.giveitallevent.com/events',c:'#E8C65F'};}
+      return{l:'Details',u:'https://www.giveitallevent.com/events-calendar',c:'#E8C65F'};}
     var url='https://www.googleapis.com/calendar/v3/calendars/'+encodeURIComponent(CAL_ID)+'/events?key='+CAL_KEY
       +'&timeMin='+new Date().toISOString()+'&singleEvents=true&orderBy=startTime&maxResults=15';
     var typeOf=function(t){t=(t||'').toLowerCase();

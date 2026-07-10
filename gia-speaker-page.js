@@ -710,7 +710,7 @@
           <a href="https://www.giveitallevent.com/speak-at-give-it-all" target="_blank" rel="noopener">Speak on Stage</a>
           <a href="https://www.parallaxxtransformations.com" target="_blank" rel="noopener">Parallaxx Transformations</a>
           <a class="is-soon" aria-disabled="true">Virtual Membership <span class="soon-tag">soon</span></a>
-          <a href="https://www.giveitallevent.com/events">Events calendar</a>
+          <a href="https://www.giveitallevent.com/events-calendar">Events calendar</a>
         </div>
         <div class="foot-col">
           <h4>Our deeper world</h4>

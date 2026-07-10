@@ -210,7 +210,7 @@
             <a href="https://www.parallaxxtransformations.com" target="_blank" rel="noopener">Parallaxx Transformations</a>
             <a href="#" class="is-soon">Virtual Membership <span>soon</span></a>
           <div style="height:1px;background:rgba(177,191,215,.16);margin:6px 4px"></div>
-          <a href="https://www.giveitallevent.com/events" style="color:var(--gold)">Events calendar</a>
+          <a href="https://www.giveitallevent.com/events-calendar" style="color:var(--gold)">Events calendar</a>
           </div>
         </div>
         <a href="https://www.giveitallevent.com/speak-at-give-it-all" target="_blank" rel="noopener">Speak</a>
@@ -355,7 +355,7 @@
             <a href="https://www.giveitallevent.com/founders-breakfast-bali" target="_blank" rel="noopener">Founders Breakfast</a>
             <a href="https://www.giveitallevent.com/speak-at-give-it-all" target="_blank" rel="noopener">Speak on Stage</a>
             <a href="https://www.parallaxxtransformations.com" target="_blank" rel="noopener">Parallaxx Transformations</a>
-            <a href="https://www.giveitallevent.com/events">Events calendar</a>
+            <a href="https://www.giveitallevent.com/events-calendar">Events calendar</a>
           <a href="#">Virtual Membership</a>
           </div>
           <div class="foot-col">
