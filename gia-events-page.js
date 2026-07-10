@@ -35,6 +35,7 @@
     --ink-hi:#F4F6FB; --ink:#E2E7F1; --ink-2:#B1BFD7;
     --rule:rgba(177,191,215,.22);
     --maxw:1120px; --r:18px;
+    --gutter:clamp(20px,5vw,64px); --ease:cubic-bezier(.22,.61,.36,1);
   }
   *,*::before,*::after{box-sizing:border-box;}
   :host{display:block;margin:0;background:var(--navy);color:var(--ink);
@@ -44,7 +45,7 @@
   .wrap{max-width:var(--maxw);margin:0 auto;padding:0 22px;}
   section{position:relative;}
   .band{padding:56px 0;}
-  .band-head{padding:40px 0 22px;}
+  .band-head{padding:96px 0 20px;}
   .head-row{display:flex;align-items:flex-end;justify-content:space-between;gap:20px;flex-wrap:wrap;}
   .deep{background:var(--navy-deep);}
   .script{font-family:'Caveat',cursive;color:var(--gold);font-weight:600;font-size:clamp(1.25rem,3.4vw,1.7rem);line-height:1;}
@@ -112,14 +113,123 @@
   .subband p{color:var(--ink-2);font-size:.95rem;max-width:none;margin:6px auto 18px;}
   .subband .fine{font-size:.76rem;opacity:.8;margin-top:14px;}
 
+  /* ===== standard nav ===== */
+  header.nav{position:fixed;top:0;left:0;right:0;z-index:90;transition:background .35s var(--ease),border-color .35s var(--ease);border-bottom:1px solid transparent;}
+  header.nav.scrolled{background:rgba(6,25,56,.82);backdrop-filter:blur(14px);border-bottom-color:rgba(177,191,215,.14);}
+  .nav-inner{max-width:var(--maxw);margin:0 auto;padding:18px var(--gutter);display:flex;align-items:center;justify-content:space-between;gap:20px;}
+  .logo{display:flex;align-items:center;gap:.6em;font-weight:800;letter-spacing:-.02em;font-size:1.12rem;color:var(--ink-hi);}
+  .logo .mark{width:30px;height:30px;border-radius:8px;background:var(--gold);color:var(--navy);display:grid;place-items:center;font-size:.95rem;font-weight:800;flex:0 0 auto;}
+  .nav-links{display:flex;align-items:center;gap:30px}
+  .nav-links a{font-size:.92rem;font-weight:500;color:var(--ink-2);transition:color .2s;white-space:nowrap}
+  .nav-links a:hover{color:var(--ink-hi)}
+  .nav-item{position:relative;display:flex;align-items:center}
+  .nav-drop-toggle{background:none;border:none;font-family:inherit;font-size:.92rem;font-weight:500;color:var(--ink-2);cursor:pointer;display:inline-flex;align-items:center;gap:.35em;transition:color .2s;white-space:nowrap;padding:0}
+  .nav-item:hover .nav-drop-toggle,.nav-item:focus-within .nav-drop-toggle{color:var(--ink-hi)}
+  .nav-drop-toggle .caret{font-size:.7em;transition:transform .25s var(--ease)}
+  .nav-item:hover .nav-drop-toggle .caret,.nav-item:focus-within .nav-drop-toggle .caret{transform:rotate(180deg)}
+  .nav-drop{position:absolute;top:100%;left:50%;transform:translateX(-50%) translateY(8px);min-width:236px;display:flex;flex-direction:column;gap:2px;background:rgba(13,35,80,.97);backdrop-filter:blur(14px);border:1px solid rgba(177,191,215,.16);border-radius:14px;padding:10px;box-shadow:0 22px 54px -18px rgba(0,0,0,.65);opacity:0;visibility:hidden;pointer-events:none;transition:opacity .2s var(--ease),transform .2s var(--ease);z-index:95;}
+  .nav-item:hover .nav-drop,.nav-item:focus-within .nav-drop{opacity:1;visibility:visible;pointer-events:auto;transform:translateX(-50%) translateY(0)}
+  .nav-drop a{display:flex;justify-content:space-between;align-items:center;gap:14px;padding:9px 12px;border-radius:9px;font-size:.9rem;font-weight:500;color:var(--ink);white-space:nowrap;transition:background .2s,color .2s}
+  .nav-drop a:hover{background:rgba(232,198,95,.1);color:var(--gold)}
+  .nav-drop a.is-soon{color:var(--ink-2)}
+  .nav-drop a.is-soon span{font-size:.6rem;letter-spacing:.12em;text-transform:uppercase;border:1px solid rgba(177,191,215,.35);border-radius:999px;padding:.15em .6em;font-weight:700}
+  .nav-cta{display:flex;align-items:center;gap:18px}
+  .nav-cta .btn{padding:.7em 1.3em;font-size:.9rem}
+  .nav-mobile-cta{display:none}
+  .menu-btn{display:none;background:none;border:none;color:var(--ink);cursor:pointer;flex-direction:column;gap:5px;padding:6px}
+  .menu-btn span{display:block;width:24px;height:2px;background:var(--ink);border-radius:2px}
+  @media(max-width:880px){
+    header.nav{background:rgba(6,25,56,.94);backdrop-filter:blur(12px);border-bottom:1px solid rgba(177,191,215,.12)}
+    .nav-inner{padding:10px var(--gutter)}
+    .logo{font-size:1rem}.logo .mark{width:26px;height:26px;font-size:.85rem}
+    .nav-cta .btn{display:none}
+    .nav-links{display:none;position:absolute;top:100%;left:0;right:0;flex-direction:column;align-items:stretch;gap:2px;background:rgba(6,25,56,.98);backdrop-filter:blur(14px);border-bottom:1px solid rgba(177,191,215,.14);padding:12px var(--gutter) 22px;}
+    .nav.menu-open .nav-links{display:flex}
+    .nav-links > a:not(.btn){padding:13px 4px;font-size:1.05rem;border-bottom:1px solid rgba(177,191,215,.08)}
+    .nav-mobile-cta{display:inline-flex;align-self:flex-start;margin:14px 4px 2px;padding:.8em 1.6em;font-size:.95rem}
+    .nav-item{flex-direction:column;align-items:stretch}
+    .nav-drop-toggle{padding:13px 4px;font-size:1.05rem;justify-content:space-between;width:100%}
+    .nav-item .nav-drop{position:static;transform:none;opacity:1;visibility:visible;pointer-events:auto;background:transparent;border:none;box-shadow:none;backdrop-filter:none;min-width:0;padding:2px 0 10px 12px;margin:0;}
+    .nav-item:hover .nav-drop,.nav-item:focus-within .nav-drop{transform:none}
+    .nav-item .nav-drop a{font-size:.98rem;padding:9px 8px}
+    .nav-drop-toggle .caret{display:none}
+    .menu-btn{display:flex}
+  }
+
+  /* ===== standard footer ===== */
+  footer{display:block;background:var(--navy-deep);border-top:1px solid rgba(177,191,215,.12);padding:56px 0 34px;margin-top:24px;}
+  .foot-top{display:flex;justify-content:space-between;gap:40px;flex-wrap:wrap;margin-bottom:40px}
+  .foot-cols{display:flex;gap:clamp(36px,7vw,88px);flex-wrap:wrap}
+  .foot-col h4{font-size:.64rem;letter-spacing:.16em;text-transform:uppercase;color:var(--ink-2);margin-bottom:16px;font-weight:700}
+  .foot-col a{display:block;color:var(--ink);opacity:.82;font-size:.8rem;margin-bottom:10px;transition:opacity .2s,color .2s}
+  .foot-col a:hover{opacity:1;color:var(--gold)}
+  .foot-brand{max-width:30ch}
+  .foot-brand .lead{font-size:.78rem;margin-top:14px;line-height:1.5}
+  .foot-social{display:flex;gap:16px;margin-top:16px}
+  .foot-social a{color:var(--ink);opacity:.82;font-size:.78rem;font-weight:600;transition:opacity .2s,color .2s}
+  .foot-social a:hover{opacity:1;color:var(--gold)}
+  .foot-bottom{display:flex;justify-content:space-between;gap:18px;flex-wrap:wrap;padding-top:24px;border-top:1px solid rgba(177,191,215,.1);color:var(--ink-2);font-size:.72rem}
+
   @media(max-width:640px){
     .cal-desktop{display:none;}
     .cal-agenda{display:flex;}
-    .cal-tools .mlabel{min-width:0;font-size:1.1rem;}
+    .band{padding:30px 0;}
+    .band-head{padding:74px 0 12px;}
+    .head-row{gap:14px;}
+    .script{font-size:1.35rem;}
+    .h-hero{font-size:clamp(1.7rem,7.6vw,2.3rem);}
+    .hero-cta{margin-top:16px;gap:10px;}
+    .hero-cta .btn{padding:11px 18px;font-size:.85rem;}
+    .cal-tools{gap:8px;margin-bottom:14px;}
+    .cal-tools .mlabel{min-width:0;font-size:1.05rem;}
+    .cal-today{padding:8px 13px;font-size:.78rem;}
+    .cal-nav{width:34px;height:34px;}
+    .legend{gap:12px 14px;font-size:.74rem;margin-top:14px;}
+    .subband{padding:26px 18px;}
+    .subband .h-2{font-size:1.35rem;}
+    .ev{gap:11px;padding:12px 13px;}
+    .ev-date{min-width:40px;}
+    .ev-date .dd{font-size:1.2rem;}
+    .ev-body .t{font-size:.92rem;}
+    .ev-body .m{font-size:.78rem;}
+    .ev-cta{padding:.5em .85em;font-size:.74rem;}
+    .foot-top{gap:26px;margin-bottom:28px}
+    .foot-col a{font-size:.76rem;margin-bottom:8px}
+    footer{padding:40px 0 26px;margin-top:16px;}
   }
   `;
 
   var HTML = `
+  <header class="nav" id="nav">
+    <div class="nav-inner">
+      <a href="https://www.giveitallevent.com" class="logo"><span class="mark">G</span> GIVE&nbsp;IT&nbsp;ALL</a>
+      <nav class="nav-links">
+        <div class="nav-item">
+          <button class="nav-drop-toggle" aria-haspopup="true" aria-expanded="false">Experiences <span class="caret">▾</span></button>
+          <div class="nav-drop">
+            <a href="https://www.giveitallevent.com/bali-speaker-networking-event">Speaker &amp; Networking Event</a>
+            <a href="https://www.giveitallevent.com/founders-breakfast-bali" target="_blank" rel="noopener">Founders Breakfast</a>
+            <a href="https://www.giveitallevent.com/speak-at-give-it-all" target="_blank" rel="noopener">Speak on Stage</a>
+            <a href="https://www.parallaxxtransformations.com/the-reconnected-man" target="_blank" rel="noopener">Reconnected Man</a>
+            <a href="https://www.parallaxxtransformations.com" target="_blank" rel="noopener">Parallaxx Transformations</a>
+            <a href="#" class="is-soon">Virtual Membership <span>soon</span></a>
+            <div style="height:1px;background:rgba(177,191,215,.16);margin:6px 4px"></div>
+            <a href="https://www.giveitallevent.com/events-calendar" style="color:var(--gold)">Events calendar</a>
+          </div>
+        </div>
+        <a href="https://www.giveitallevent.com/speak-at-give-it-all" target="_blank" rel="noopener">Speak</a>
+        <a href="https://www.giveitallevent.com/members" target="_blank" rel="noopener">Members</a>
+        <a href="https://www.giveitallevent.com/partners" target="_blank" rel="noopener">Partners</a>
+        <a href="https://www.giveitallevent.com/about-us" target="_blank" rel="noopener">About</a>
+        <a href="https://www.giveitallevent.com/bali-speaker-networking-event" class="btn btn-gold nav-mobile-cta">Get tickets <span class="arrow">→</span></a>
+      </nav>
+      <div class="nav-cta">
+        <a href="https://www.giveitallevent.com/bali-speaker-networking-event" class="btn btn-gold">Get tickets <span class="arrow">→</span></a>
+        <button class="menu-btn" aria-label="Menu"><span></span><span></span><span></span></button>
+      </div>
+    </div>
+  </header>
+
   <section class="band-head">
     <div class="wrap head-row">
       <div>
@@ -172,6 +282,52 @@
       </div>
     </div>
   </section>
+
+  <footer>
+    <div class="wrap">
+      <div class="foot-top">
+        <div class="foot-brand">
+          <a href="https://www.giveitallevent.com" class="logo"><span class="mark">G</span> GIVE&nbsp;IT&nbsp;ALL</a>
+          <p class="lead">Connect as humans again to improve all relationships with each other.</p>
+        </div>
+        <div class="foot-social">
+          <a href="https://www.instagram.com/giveitall_event" target="_blank" rel="noopener">Instagram</a>
+          <a href="https://www.facebook.com/giveitallevent" target="_blank" rel="noopener">Facebook</a>
+          <a href="https://www.youtube.com/@giveitall-speakerandnetworking" target="_blank" rel="noopener">YouTube</a>
+          <a href="https://www.linkedin.com/in/daniel-reconnect-you/" target="_blank" rel="noopener">LinkedIn</a>
+        </div>
+        <div class="foot-cols">
+          <div class="foot-col">
+            <h4>Experiences</h4>
+            <a href="https://www.giveitallevent.com/bali-speaker-networking-event">Next event</a>
+            <a href="https://www.giveitallevent.com/founders-breakfast-bali" target="_blank" rel="noopener">Founders Breakfast</a>
+            <a href="https://www.giveitallevent.com/speak-at-give-it-all" target="_blank" rel="noopener">Speak on Stage</a>
+            <a href="https://www.parallaxxtransformations.com" target="_blank" rel="noopener">Parallaxx Transformations</a>
+            <a href="https://www.giveitallevent.com/events-calendar">Events calendar</a>
+          </div>
+          <div class="foot-col">
+            <h4>Our deeper world</h4>
+            <a href="https://www.parallaxxtransformations.com/the-reconnected-man" target="_blank" rel="noopener">Reconnected Man</a>
+            <a href="https://www.parallaxxtransformations.com/the-reconnected-woman" target="_blank" rel="noopener">Reconnected Woman</a>
+            <a href="https://www.giveitallevent.com/reconnect" target="_blank" rel="noopener">Reconnect</a>
+          </div>
+          <div class="foot-col">
+            <h4>About</h4>
+            <a href="https://www.giveitallevent.com/about-us" target="_blank" rel="noopener">Our story</a>
+            <a href="https://www.giveitallevent.com/members" target="_blank" rel="noopener">Members</a>
+            <a href="https://www.giveitallevent.com/partner-packages" target="_blank" rel="noopener">Partner with us</a>
+          </div>
+        </div>
+      </div>
+      <div class="foot-bottom">
+        <span>© 2026 GIVE IT ALL. All rights reserved.</span>
+        <span style="display:inline-flex;gap:18px;flex-wrap:wrap">
+          <a href="https://www.giveitallevent.com/privacy-policy" style="color:inherit;border-bottom:1px solid rgba(232,198,95,.4)">Privacy Policy</a>
+          <a href="https://www.giveitallevent.com/refund-policy" style="color:inherit;border-bottom:1px solid rgba(232,198,95,.4)">Refund Policy</a>
+        </span>
+      </div>
+    </div>
+  </footer>
   `;
 
   class GIAEventsPage extends HTMLElement {
@@ -180,6 +336,18 @@
       var shadow = this.attachShadow({mode:'open'});
       shadow.innerHTML = '<style>'+CSS+'</style>'+HTML;
       var root = shadow;
+
+      /* standard nav: scrolled state + mobile menu toggle */
+      var navEl = root.getElementById('nav');
+      if (navEl){
+        var onNavScroll = function(){ navEl.classList.toggle('scrolled', window.scrollY > 40); };
+        window.addEventListener('scroll', onNavScroll, {passive:true}); onNavScroll();
+        var mBtn = root.querySelector('.menu-btn');
+        if (mBtn){
+          mBtn.addEventListener('click', function(){ navEl.classList.toggle('menu-open'); });
+          root.querySelectorAll('.nav-links a').forEach(function(a){ a.addEventListener('click', function(){ navEl.classList.remove('menu-open'); }); });
+        }
+      }
 
       root.getElementById('subBtn').href = CONFIG.subscribeWebcal;
       root.getElementById('subBtn2').href = CONFIG.subscribeWebcal;
