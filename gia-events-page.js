@@ -23,7 +23,7 @@
     links: {
       tickets: "https://www.giveitallevent.com/bali-speaker-networking-event",
       breakfast: "https://www.giveitallevent.com/founders-breakfast-bali",
-      reconnect: "https://www.giveitallevent.com/reconnect"
+      reconnect: "https://www.parallaxxtransformations.com/the-reconnected-man"
     }
   };
 
@@ -127,7 +127,7 @@
         <h1 class="h-hero">The GIVE IT ALL calendar</h1>
       </div>
       <div class="hero-cta">
-        <a class="btn btn-gold" id="subBtn" href="#">Subscribe <span class="arrow">→</span></a>
+        <a class="btn btn-gold" id="subBtn" href="#" target="_blank" rel="noopener">Subscribe <span class="arrow">→</span></a>
         <a class="btn btn-ghost" id="googleBtn" href="#" target="_blank" rel="noopener">Add to Google</a>
       </div>
     </div>
@@ -167,7 +167,7 @@
         <div class="ic">🔔</div>
         <h2 class="h-2">Never miss a date</h2>
         <p>Add the whole GIVE IT ALL calendar to your phone in one tap.</p>
-        <a class="btn btn-gold" id="subBtn2" href="#">Subscribe to the calendar <span class="arrow">→</span></a>
+        <a class="btn btn-gold" id="subBtn2" href="#" target="_blank" rel="noopener">Subscribe to the calendar <span class="arrow">→</span></a>
         <p class="fine">Works with Apple Calendar, Google Calendar and Outlook.</p>
       </div>
     </div>

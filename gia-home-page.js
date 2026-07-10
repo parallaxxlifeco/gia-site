@@ -735,7 +735,7 @@
       <div style="color:var(--steel);padding:16px 0;">Loading…</div>
     </div>
     <div style="text-align:center;margin-top:26px;">
-      <a class="btn btn-gold" href="webcal://calendar.google.com/calendar/ical/8767808db148650b514aacbce41e3630e22b851dc24910653153370adec3b08c%40group.calendar.google.com/public/basic.ics">Subscribe to the calendar <span class="arrow">→</span></a>
+      <a class="btn btn-gold" href="https://www.giveitallevent.com/events">See events calendar <span class="arrow">→</span></a>
     </div>
   </div>
 </section>
@@ -1017,13 +1017,16 @@
     var clean=function(s){return (s||'').replace(/\s[—–]\s/g,' · ');};
     function cta(t){t=(t||'').toLowerCase();
       if(t.indexOf('founders breakfast')>-1)return{l:'Book seat',u:'https://www.giveitallevent.com/founders-breakfast-bali',c:'#EFB25A'};
-      if(t.indexOf('reconnected man')>-1)return{l:'Apply',u:'https://www.giveitallevent.com/reconnect',c:'#6F9BD8'};
+      if(t.indexOf('reconnected man')>-1)return{l:'Apply',u:'https://www.parallaxxtransformations.com/the-reconnected-man',c:'#6F9BD8'};
       if(t.indexOf('give it all')>-1)return{l:'Get tickets',u:'https://www.giveitallevent.com/bali-speaker-networking-event',c:'#E8C65F'};
       return{l:'Details',u:'https://www.giveitallevent.com/events',c:'#E8C65F'};}
     var url='https://www.googleapis.com/calendar/v3/calendars/'+encodeURIComponent(CAL_ID)+'/events?key='+CAL_KEY
-      +'&timeMin='+new Date().toISOString()+'&singleEvents=true&orderBy=startTime&maxResults=3';
+      +'&timeMin='+new Date().toISOString()+'&singleEvents=true&orderBy=startTime&maxResults=15';
+    var typeOf=function(t){t=(t||'').toLowerCase();
+      return t.indexOf('reconnected man')>-1?'rm':t.indexOf('founders breakfast')>-1?'fb':t.indexOf('give it all')>-1?'gia':'other';};
     fetch(url).then(function(r){ if(!r.ok) throw new Error(r.status); return r.json(); }).then(function(data){
-      var items=(data.items||[]);
+      var all=(data.items||[]), seen={}, items=[];
+      for(var i=0;i<all.length && items.length<3;i++){ var ty=typeOf(all[i].summary); if(seen[ty]) continue; seen[ty]=true; items.push(all[i]); }
       if(!items.length){ box.innerHTML='<div style="color:var(--steel);padding:8px 0;">New dates coming soon. Subscribe below to catch them.</div>'; return; }
       box.innerHTML=items.map(function(e){
         var s=new Date(e.start.dateTime||e.start.date); var c=cta(e.summary);
