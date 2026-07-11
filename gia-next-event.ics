@@ -1,0 +1,22 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//GIVE IT ALL//Events//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:gia-next-event@giveitallevent.com
+DTSTAMP:20260710T000000Z
+DTSTART:20260723T100000Z
+DTEND:20260723T140000Z
+SUMMARY:GIVE IT ALL, Bali
+LOCATION:Amavi Canggu, Jl. Pantai Berawa No.5, Tibubeneng, Canggu, Bali 80361, Indonesia
+DESCRIPTION:Doors open 6:00pm, runs to 10:00pm. Tickets and full details: https://www.giveitallevent.com/bali-speaker-networking-event
+URL:https://www.giveitallevent.com/bali-speaker-networking-event
+STATUS:CONFIRMED
+BEGIN:VALARM
+TRIGGER:-P1D
+ACTION:DISPLAY
+DESCRIPTION:GIVE IT ALL is tomorrow
+END:VALARM
+END:VEVENT
+END:VCALENDAR

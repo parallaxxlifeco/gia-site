@@ -1,0 +1,22 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//GIVE IT ALL//Events//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:fb-next-event@giveitallevent.com
+DTSTAMP:20260710T000000Z
+DTSTART:20260728T000000Z
+DTEND:20260728T020000Z
+SUMMARY:Founders Breakfast
+LOCATION:Amavi Canggu, Jl. Pantai Berawa No.5, Tibubeneng, Canggu, Bali 80361, Indonesia
+DESCRIPTION:8:00am to 10:00am. Doors 8:00am, we sit at 8:30am sharp. Details: https://www.giveitallevent.com/founders-breakfast-bali
+URL:https://www.giveitallevent.com/founders-breakfast-bali
+STATUS:CONFIRMED
+BEGIN:VALARM
+TRIGGER:-P1D
+ACTION:DISPLAY
+DESCRIPTION:Founders Breakfast is tomorrow
+END:VALARM
+END:VEVENT
+END:VCALENDAR
