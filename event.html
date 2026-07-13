@@ -1,12 +1,38 @@
-/* GIVE IT ALL — Event page, packaged as a Wix Custom Element.
-   Generated from event.html. Tag name to set in Wix: <gia-event-page>
-   Renders in Shadow DOM so its styles never touch the rest of your Wix site. */
-(function(){
-  if (customElements.get('gia-event-page')) return;
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>GIVE IT ALL · The night you stop performing</title>
+<meta name="description" content="Voted #1 networking event in Bali. TED-style talks meet real connection. 23 July · Amavi, Canggu. No pitches, no performing." />
 
-  var CSS = `
+<!--
+==================================================================================
+  GIVE IT ALL - EVENT PAGE  (single-file, host anywhere)
+  --------------------------------------------------------------------------------
+  HOW TO UPDATE FOR EACH EVENT (about 10 min):
+    1. Edit the CONFIG block in the script near the bottom of the file.
+       The ONLY two things to change each event are the timer dates:
+         earlyBirdEnds  and  salesClose   (keep the +08:00 Bali offset).
+       (price, event date/venue, reveal date and links also live in CONFIG.)
+    2. Swap the ASSET placeholders. Search the file for  data-asset="..."  -
+       every photo / reel slot is labelled. Replace the placeholder fill with
+       <img src="YOUR_URL" class="still"> (or set a reel poster), keep the class.
+    3. Re-deploy.
+  Two timers run LIVE off those two dates (early-bird + sales-close). They handle
+  themselves: when early-bird passes the price flips to full and the early-bird
+  lines drop; when sales close the countdowns read "Sales are now closed" and the
+  gold buttons disable. No manual edits needed between those moments.
+==================================================================================
+-->
+
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,400&family=Caveat:wght@500;600;700&display=swap" rel="stylesheet" />
+
+<style>
   /* ===================== BRAND TOKENS ===================== */
-  :host{
+  :root{
     --navy:#061938;
     --navy-card:#0D2350;
     --navy-deep:#04122B;
@@ -24,7 +50,7 @@
   }
   *,*::before,*::after{box-sizing:border-box;}
   html{scroll-behavior:smooth;-webkit-text-size-adjust:100%;}
-  :host{display:block;
+  body{
     margin:0;background:var(--navy);color:var(--ink);
     font-family:'Montserrat',system-ui,-apple-system,Segoe UI,Roboto,sans-serif;
     font-weight:400;line-height:1.6;letter-spacing:.005em;
@@ -293,7 +319,7 @@
     font-size:1.05rem;font-weight:600;text-align:left;padding:20px 44px 20px 0;cursor:pointer;position:relative;}
   .qa button::after{content:"+";position:absolute;right:6px;top:50%;transform:translateY(-50%);
     color:var(--gold);font-size:1.5rem;font-weight:400;transition:transform .25s;}
-  .qa.open button::after{content:"\\2013";}
+  .qa.open button::after{content:"\2013";}
   .qa .a{max-height:0;overflow:hidden;transition:max-height .3s ease;color:var(--ink-2);font-size:.96rem;line-height:1.6;}
   .qa .a p{padding:0 0 22px;}
 
@@ -381,11 +407,17 @@
     .foot-cols{gap:32px;}
     .nav .logo span.full{display:none;}
   }
-`;
-  var HTML = `
+</style>
+</head>
+<body>
 
 <!-- ============ NAV ============ -->
-
+<header class="nav">
+  <div class="wrap">
+    <a class="logo" href="#top"><span class="mark">G</span><span class="full">GIVE IT ALL</span></a>
+    <a class="btn btn-gold btn-sm" href="https://checkout.giveitallevent.com/give-it-all-bali-booking" target="_blank" rel="noopener">Get tickets now →</a>
+  </div>
+</header>
 
 <!-- ============ HOME MARK (kept when nav is stripped for the Wix embed) ============ -->
 <a class="home-mark" href="https://www.giveitallevent.com" aria-label="Back to home">G</a>
@@ -726,7 +758,54 @@
 </section>
 
 <!-- ============ FOOTER ============ -->
-
+<footer class="speckle">
+  <div class="wrap">
+    <div class="foot-top">
+      <div class="foot-brand">
+        <a class="logo" href="https://www.giveitallevent.com"><span class="mark">G</span> GIVE&nbsp;IT&nbsp;ALL</a>
+        <p class="lead">Connect as humans again to improve all relationships with each other.</p>
+        <div class="foot-social">
+          <a href="https://www.instagram.com/giveitall_event" target="_blank" rel="noopener">Instagram</a>
+          <a href="https://www.facebook.com/giveitallevent" target="_blank" rel="noopener">Facebook</a>
+          <a href="https://www.youtube.com/@giveitall-speakerandnetworking" target="_blank" rel="noopener">YouTube</a>
+          <a href="https://www.linkedin.com/in/daniel-reconnect-you/" target="_blank" rel="noopener">LinkedIn</a>
+        </div>
+      </div>
+      <div class="foot-cols">
+        <div class="foot-col">
+          <h4>Experiences</h4>
+          <a href="#top">Next event</a>
+          <a href="https://www.giveitallevent.com/founders-breakfast-bali" target="_blank" rel="noopener">Founders Breakfast</a>
+          <a href="https://www.giveitallevent.com/speak-at-give-it-all" target="_blank" rel="noopener">Speak on Stage</a>
+          <a href="https://www.parallaxxtransformations.com" target="_blank" rel="noopener">Parallaxx Transformations</a>
+          <a href="#" class="is-soon" onclick="return false;">Virtual Membership <span class="soon">soon</span></a>
+        </div>
+        <div class="foot-col">
+          <h4>Our deeper world</h4>
+          <a href="https://www.parallaxxtransformations.com/the-reconnected-man" target="_blank" rel="noopener">Reconnected Man</a>
+          <a href="https://www.parallaxxtransformations.com/the-reconnected-woman" target="_blank" rel="noopener">Reconnected Woman</a>
+          <a href="https://www.giveitallevent.com/reconnect" target="_blank" rel="noopener">Reconnect</a>
+          <a href="https://www.parallaxxtransformations.com/reconnect-you-podcast-with-daniel-lawson" target="_blank" rel="noopener">Reconnect You (Podcast)</a>
+          <a href="https://www.youtube.com/@NotJustHisPlusOne" target="_blank" rel="noopener">Not Just His Plus One</a>
+        </div>
+        <div class="foot-col">
+          <h4>About</h4>
+          <a href="https://www.giveitallevent.com/about-us" target="_blank" rel="noopener">Our story</a>
+          <a href="https://www.giveitallevent.com/members" target="_blank" rel="noopener">Members</a>
+          <a href="https://www.giveitallevent.com/partner-packages" target="_blank" rel="noopener">Partner with us</a>
+        </div>
+      </div>
+    </div>
+    <div class="foot-bottom">
+      <span>© 2026 GIVE IT ALL. All rights reserved.</span>
+      <span class="foot-legal" style="display:inline-flex;gap:18px;flex-wrap:wrap">
+        <a href="https://www.giveitallevent.com/privacy-policy" style="color:inherit;border-bottom:1px solid rgba(232,198,95,.4)">Privacy Policy</a>
+        <a href="https://www.giveitallevent.com/refund-policy" style="color:inherit;border-bottom:1px solid rgba(232,198,95,.4)">Refund Policy</a>
+      </span>
+      <span>23 July · Amavi, Canggu</span>
+    </div>
+  </div>
+</footer>
 
 <!-- ============ LIGHTBOX ============ -->
 <div class="lb" id="lightbox" role="dialog" aria-modal="true">
@@ -736,34 +815,7 @@
   </div>
 </div>
 
-`;
-
-  // load the brand fonts once (document-level so the shadow content can use them)
-  if (!document.getElementById('gia-fonts')) {
-    var l = document.createElement('link');
-    l.id = 'gia-fonts'; l.rel = 'stylesheet';
-    l.href = 'https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,400&family=Caveat:wght@500;600;700&display=swap';
-    document.head.appendChild(l);
-  }
-
-  class GIAEventPage extends HTMLElement {
-    connectedCallback(){
-      if (this._mounted) return; this._mounted = true;
-      var shadow = this.attachShadow({mode:'open'});
-      shadow.innerHTML = '<style>'+CSS+'</style>'+HTML;
-      var root = shadow;
-      var host = this;
-
-      // smooth-scroll for in-page anchors (#top etc.) across the shadow boundary
-      root.querySelectorAll('a[href^="#"]').forEach(function(a){
-        a.addEventListener('click', function(e){
-          var id = a.getAttribute('href');
-          if (id.length > 1) { var t = root.querySelector(id); if (t){ e.preventDefault(); t.scrollIntoView({behavior:'smooth'}); } }
-        });
-      });
-
-      // ---- page logic (scoped to the shadow root) ----
-      
+<script>
 /* ============================================================
    CONFIG - edit per event, then re-deploy.
    ============================================================ */
@@ -795,18 +847,18 @@ const CONFIG = {
 };
 
 /* ---- FAQ accordion ---- */
-root.querySelectorAll('.qa button').forEach(btn=>{
+document.querySelectorAll('.qa button').forEach(btn=>{
   btn.addEventListener('click',()=>{
     const qa=btn.parentElement;
     const open=qa.classList.contains('open');
-    root.querySelectorAll('.qa').forEach(x=>{x.classList.remove('open');x.querySelector('.a').style.maxHeight=null;});
+    document.querySelectorAll('.qa').forEach(x=>{x.classList.remove('open');x.querySelector('.a').style.maxHeight=null;});
     if(!open){qa.classList.add('open');const a=qa.querySelector('.a');a.style.maxHeight=a.scrollHeight+'px';}
   });
 });
 
 /* ---- Gallery horizontal scroll ---- */
-const gallery=root.getElementById('gallery');
-root.querySelectorAll('[data-scroll]').forEach(b=>{
+const gallery=document.getElementById('gallery');
+document.querySelectorAll('[data-scroll]').forEach(b=>{
   b.addEventListener('click',()=>{
     const dir=+b.dataset.scroll;
     gallery.scrollBy({left:dir*Math.min(gallery.clientWidth*0.8,360),behavior:'smooth'});
@@ -814,15 +866,15 @@ root.querySelectorAll('[data-scroll]').forEach(b=>{
 });
 
 /* ---- Lightbox: gallery shots + reels ---- */
-const lb=root.getElementById('lightbox');
-const lbContent=root.getElementById('lbContent');
+const lb=document.getElementById('lightbox');
+const lbContent=document.getElementById('lbContent');
 function openLB(html){lbContent.innerHTML=html;lb.classList.add('on');document.body.style.overflow='hidden';}
 function closeLB(){lb.classList.remove('on');lbContent.innerHTML='';document.body.style.overflow='';}
-root.getElementById('lbClose').addEventListener('click',closeLB);
+document.getElementById('lbClose').addEventListener('click',closeLB);
 lb.addEventListener('click',e=>{if(e.target===lb)closeLB();});
 document.addEventListener('keydown',e=>{if(e.key==='Escape')closeLB();});
 
-root.querySelectorAll('.shot').forEach(s=>{
+document.querySelectorAll('.shot').forEach(s=>{
   s.addEventListener('click',()=>{
     const img=s.querySelector('img');
     if(img){ openLB('<img src="'+img.getAttribute('src')+'" alt="">'); return; }
@@ -830,11 +882,11 @@ root.querySelectorAll('.shot').forEach(s=>{
     openLB('<div class="ph">'+label+'<br><span style="opacity:.6">swap with full-resolution image</span></div>');
   });
 });
-root.querySelectorAll('.reel').forEach(r=>{
+document.querySelectorAll('.reel').forEach(r=>{
   r.addEventListener('click',()=>{
     const vid=r.getAttribute('data-video');
     if(!vid || r.classList.contains('playing')) return;   // placeholders (no video) stay inert
-    root.querySelectorAll('.reel-video').forEach(x=>x.pause());  // pause any other playing reel
+    document.querySelectorAll('.reel-video').forEach(x=>x.pause());  // pause any other playing reel
     r.classList.add('playing');
     const v=document.createElement('video');
     v.src=vid; v.controls=true; v.autoplay=true; v.playsInline=true;
@@ -864,15 +916,15 @@ root.querySelectorAll('.reel').forEach(r=>{
   const compact = t => t.d + 'd ' + two(t.h) + 'h ' + two(t.m) + 'm';                   // hero / final
   const full    = t => two(t.d)+'d : '+two(t.h)+'h : '+two(t.m)+'m : '+two(t.s)+'s';    // price line
 
-  const heroLine   = root.getElementById('heroTimer');
-  const ebPriceWrap= root.getElementById('ebPriceWrap');
-  const priceNow   = root.querySelector('.price .now');
-  const ebTag      = root.querySelector('.eb-tag');
-  const priceNote  = root.getElementById('priceNote');
-  const salesCd    = root.getElementById('salesCountdown');
-  const salesCap   = root.querySelector('.cd-cap');
-  const finalTimer = root.getElementById('finalTimer');
-  const goldCtas   = root.querySelectorAll('a.btn-gold');
+  const heroLine   = document.getElementById('heroTimer');
+  const ebPriceWrap= document.getElementById('ebPriceWrap');
+  const priceNow   = document.querySelector('.price .now');
+  const ebTag      = document.querySelector('.eb-tag');
+  const priceNote  = document.getElementById('priceNote');
+  const salesCd    = document.getElementById('salesCountdown');
+  const salesCap   = document.querySelector('.cd-cap');
+  const finalTimer = document.getElementById('finalTimer');
+  const goldCtas   = document.querySelectorAll('a.btn-gold');
 
   function paint(el, t){
     if(!el) return;
@@ -921,8 +973,6 @@ root.querySelectorAll('.reel').forEach(r=>{
     const id = setInterval(()=>{ if (tick() === false) clearInterval(id); }, 1000);
   }
 })();
-
-    }
-  }
-  customElements.define('gia-event-page', GIAEventPage);
-})();
+</script>
+</body>
+</html>
