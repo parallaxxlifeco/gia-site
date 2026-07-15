@@ -267,6 +267,7 @@
 
   .host{display:grid;grid-template-columns:340px 1fr;gap:38px;align-items:center;}
   .host .portrait{aspect-ratio:4/5;border-radius:var(--r);overflow:hidden;border:1px solid var(--rule-2);}
+  .host .steel{font-size:1.08rem;line-height:1.68;max-width:60ch;}
   .host blockquote{margin:20px 0 0;padding-left:18px;border-left:2px solid var(--gold-line);
     color:var(--ink-hi);font-weight:600;font-size:1.12rem;line-height:1.4;}
   .host .sig{margin-top:14px;color:var(--ink-2);font-style:italic;}
