@@ -165,7 +165,7 @@
           <a href="https://www.giveitallevent.com/founders-breakfast-bali" target="_blank" rel="noopener">Founders Breakfast</a>
           <a href="https://www.giveitallevent.com/speak-at-give-it-all" target="_blank" rel="noopener">Speak on Stage</a>
           <a href="https://www.parallaxxtransformations.com/the-reconnected-man" target="_blank" rel="noopener">Reconnected Man</a>
-          <a href="https://www.parallaxxtransformations.com" target="_blank" rel="noopener">Parallaxx Transformations</a>
+          <a href="https://www.parallaxxtransformations.com/coaching-experiences" target="_blank" rel="noopener">Parallaxx Transformations</a>
           <a href="#" class="is-soon">Virtual Membership <span>soon</span></a>
           <div style="height:1px;background:rgba(177,191,215,.16);margin:6px 4px"></div>
           <a href="https://www.giveitallevent.com/events-calendar" style="color:var(--gold)">Events calendar</a>
@@ -288,7 +288,7 @@
           <a href="https://www.giveitallevent.com/bali-speaker-networking-event" target="_blank" rel="noopener">Next event</a>
           <a href="https://www.giveitallevent.com/founders-breakfast-bali" target="_blank" rel="noopener">Founders Breakfast</a>
           <a href="https://www.giveitallevent.com/speak-at-give-it-all" target="_blank" rel="noopener">Speak on Stage</a>
-          <a href="https://www.parallaxxtransformations.com" target="_blank" rel="noopener">Parallaxx Transformations</a>
+          <a href="https://www.parallaxxtransformations.com/coaching-experiences" target="_blank" rel="noopener">Parallaxx Transformations</a>
           <a href="#" class="is-soon-link">Virtual Membership</a>
           <a href="https://www.giveitallevent.com/events-calendar">Events calendar</a>
         </div>
