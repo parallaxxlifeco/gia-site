@@ -279,9 +279,6 @@
         <div class="levels" id="levels"></div>
         <div class="scale-labels"><span id="scaleLo">1 · Not yet</span><span id="scaleHi">10 · Dialed in</span></div>
 
-        <label class="note-label" for="noteField">A note to yourself (optional)</label>
-        <textarea class="note-field" id="noteField" rows="2" placeholder="Something you'd want to remember or talk about..."></textarea>
-
         <div class="nav-row">
           <button class="btn ghost" id="backBtn">← Back</button>
           <button class="btn" id="nextBtn" disabled>Next →</button>
@@ -311,7 +308,6 @@
         <p class="match-note">Find the founder whose strengths meet your flat spots. <b>That's your first conversation this morning.</b> Give before you get.</p>
 
         <div class="summary" id="summary"></div>
-        <div class="reflection" id="reflection"></div>
 
         <div class="btn-row" style="justify-content:center; margin-top:24px;">
           <button class="btn" id="downloadBtn">Download my wheel</button>
@@ -407,7 +403,6 @@
     const segs = CONFIG.segments;
     const MAX = CONFIG.maxScore;
     const scores = new Array(segs.length).fill(0);
-    const notes  = new Array(segs.length).fill("");
     let current = 0;
     const $ = id => root.getElementById(id);
 
@@ -459,7 +454,6 @@
       $('segPillar').style.color = seg.color;
       $('segTitle').textContent = seg.name;
       $('segDesc').textContent = seg.desc;
-      $('noteField').value = notes[current] || '';
       $('progLabel').textContent = `Dimension ${current+1} of ${segs.length}`;
       const pct = Math.round((current)/segs.length*100);
       $('progPct').textContent = pct + '%';
@@ -472,24 +466,21 @@
     // ---- Navigation ----
     $('startBtn').addEventListener('click', ()=>{ current=0; renderSegment(); show('screen-rate'); });
     $('backBtn').addEventListener('click', ()=>{
-      notes[current] = $('noteField').value;
       if(current>0){ current--; renderSegment(); }
     });
     $('nextBtn').addEventListener('click', ()=>{
       if(scores[current]===0) return;
-      notes[current] = $('noteField').value;
       if(current < segs.length-1){ current++; renderSegment(); }
       else { $('progBar').style.width='100%'; $('progPct').textContent='100%'; goReveal(); }
     });
     $('restartBtn').addEventListener('click', ()=>{
-      scores.fill(0); notes.fill(''); current=0; show('screen-intro');
+      scores.fill(0); current=0; show('screen-intro');
     });
 
     // ---- Reveal ----
     function goReveal(){
       buildInsights();
       buildSummary();
-      buildReflection();
       show('screen-reveal');
       const avg = (scores.reduce((a,b)=>a+b,0)/segs.length).toFixed(1);
       $('avgPill').textContent = `Overall balance: ${avg} / ${MAX}`;
@@ -531,22 +522,6 @@
         group.innerHTML = rows;
         sum.appendChild(group);
       });
-    }
-
-    function escapeHtml(s){
-      return s.replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
-    }
-    function buildReflection(){
-      const ref = $('reflection'); ref.innerHTML = '';
-      const items = segs.map((s,i)=>({s, note:(notes[i]||'').trim()})).filter(x=>x.note);
-      if(!items.length){ ref.style.display='none'; return; }
-      ref.style.display='block';
-      let html = '<p class="pillar-head" style="color:var(--gold)">Notes to sit with</p>';
-      items.forEach(x=>{
-        html += `<div class="reflect-item"><span class="summary-swatch" style="background:${x.s.color}"></span>`+
-                `<div><span class="reflect-name">${x.s.name}</span><span class="reflect-note">“${escapeHtml(x.note)}”</span></div></div>`;
-      });
-      ref.innerHTML = html;
     }
 
     // ---- Canvas wheel ----
