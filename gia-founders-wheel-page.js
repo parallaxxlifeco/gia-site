@@ -34,6 +34,8 @@
     --ease:cubic-bezier(.22,.61,.36,1);
 
     display:block;
+    box-sizing:border-box;
+    width:100%;
     font-family:'Montserrat',system-ui,-apple-system,'Segoe UI',Roboto,Helvetica,Arial,sans-serif;
     background:
       radial-gradient(1200px 700px at 50% -10%, rgba(232,198,95,.10), transparent 60%),
@@ -305,7 +307,7 @@
             <div id="supportList"></div>
           </div>
         </div>
-        <p class="match-note">Find the founder whose strengths meet your flat spots. <b>That's your first conversation this morning.</b> Give before you get.</p>
+        <p class="match-note">Find your opposite: where your strengths meet their gaps, and theirs meet yours. <b>Lead with what you can give.</b> That's your first conversation this morning.</p>
 
         <div class="summary" id="summary"></div>
 
@@ -351,9 +353,9 @@
       intro:      "Twelve dimensions. Honesty with yourself. Your first thought is the right one.",
       introFoot:  "Nothing you put in leaves this screen",
       revealFoot: "Screenshot it, download it, then go find your opposite in the room and give first.",
-      maxScore:   10,
+      maxScore:   7,
       scaleLow:   "1 · Not yet",
-      scaleHigh:  "10 · Right where I want it",
+      scaleHigh:  "7 · Right where I want it",
 
       pillars: {
         "Inner Game": { color:"#EE9E6A", sub:"The personal that shows up in business" },
