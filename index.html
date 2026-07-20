@@ -25,6 +25,7 @@
     <a href="?page=packages">Partner packages</a>
     <a href="?page=founders">Founders</a>
     <a href="?page=members">Members</a>
+    <a href="?page=wheel">Wheel</a>
   </nav>
   <div id="mount"></div>
   <script>
@@ -34,7 +35,8 @@
       partners: { tag:'gia-partners-page',           src:'gia-partners-page.js'           },
       packages: { tag:'gia-partner-packages-page',   src:'gia-partner-packages-page.js'   },
       founders: { tag:'gia-founders-breakfast-page', src:'gia-founders-breakfast-page.js' },
-      members:  { tag:'gia-members-page',            src:'gia-members-page.js'            }
+      members:  { tag:'gia-members-page',            src:'gia-members-page.js'            },
+      wheel:    { tag:'gia-founders-wheel-page',     src:'gia-founders-wheel-page.js'     }
     };
     var key = new URLSearchParams(location.search).get('page');
     if (!pages[key]) key = 'event';                 // default keeps root = event page
