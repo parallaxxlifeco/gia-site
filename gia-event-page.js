@@ -491,23 +491,33 @@
              Featured default video: 111174_26984c1da8264cba921f34017b2e81db
            To ANNOUNCE a speaker: swap data-video + the <video class="still"> src to the speaker's reel,
            and change .cap .nm from "Announcing soon" to the speaker's name. ===== -->
-      <div class="reel headline is-static">
-        <img class="still" src="https://static.wixstatic.com/media/111174_684d9509d38c44e19459a4ea103bcd8d~mv2.png/v1/fill/w_600,h_1066,q_90,enc_auto/file.png" alt="Rory Callaghan, Headline Speaker - Coherence before creation" loading="lazy">
+      <div class="reel headline" data-reel="HEADLINE reel" data-video="https://video.wixstatic.com/video/111174_fc2501f1178542ac9528a5318387144c/1080p/mp4/file.mp4">
+        <video class="still" src="https://video.wixstatic.com/video/111174_fc2501f1178542ac9528a5318387144c/1080p/mp4/file.mp4#t=0.5" preload="metadata" muted playsinline></video>
+        <div class="grad"></div>
+        <span class="toptag pill">Headline</span>
+        <div class="taste">A taste of the stage</div>
+        <div class="play"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></div>
+        <div class="cap"><div class="nm">Announcing soon</div></div>
       </div>
-      <div class="reel is-static">
-        <img class="still" src="https://static.wixstatic.com/media/111174_4ca69ce389b54c0fb563999389783a1b~mv2.png/v1/fill/w_600,h_1066,q_90,enc_auto/file.png" alt="Nathan Aherne, Featured Speaker - Permission to be hated" loading="lazy">
+      <div class="reel" data-reel="FEATURED reel" data-video="https://video.wixstatic.com/video/111174_26984c1da8264cba921f34017b2e81db/1080p/mp4/file.mp4">
+        <video class="still" src="https://video.wixstatic.com/video/111174_26984c1da8264cba921f34017b2e81db/1080p/mp4/file.mp4#t=0.5" preload="metadata" muted playsinline></video>
+        <div class="grad"></div>
+        <span class="toptag pill">Featured</span>
+        <div class="taste">A taste of the stage</div>
+        <div class="play"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></div>
+        <div class="cap"><div class="nm">Announcing soon</div></div>
       </div>
     </div>
     <p class="spk-note">We reveal the lineup closer to event night. Every speaker is intentionally selected. Come for the speakers, return because of the full experience.</p>
 
     <div class="lineup-h">And the rest of the lineup</div>
     <div class="lineup">
-      <div class="person"><div class="ph"><img src="https://static.wixstatic.com/media/111174_8266a4a8e35e417ab86e67c30ce425ae~mv2.jpeg/v1/fill/w_500,h_500,fp_0.50_0.28,q_85,enc_auto/file.jpeg" alt="Jessica Seruno, speaker at GIVE IT ALL Bali" loading="lazy" style="object-position:center center"></div><div class="nm">Jessica Seruno</div><div class="tp">Forgiveness means success</div></div>
-      <div class="person"><div class="ph"><img src="https://static.wixstatic.com/media/111174_284022a1c97d4dbdb1911d7daacb8586~mv2.jpg/v1/fill/w_500,h_500,fp_0.50_0.30,q_85,enc_auto/file.jpg" alt="Peter Meglis, speaker at GIVE IT ALL Bali" loading="lazy" style="object-position:center center"></div><div class="nm">Peter Meglis</div><div class="tp">Three Lines</div></div>
-      <div class="person"><div class="ph"><img src="https://static.wixstatic.com/media/111174_5fb14430c5904d70924aacf165a3cb90~mv2.jpeg/v1/fill/w_500,h_500,fp_0.50_0.26,q_85,enc_auto/file.jpeg" alt="Serena Spink, speaker at GIVE IT ALL Bali" loading="lazy" style="object-position:center center"></div><div class="nm">Serena Spink</div><div class="tp">Trapped by Empathy</div></div>
-      <div class="person"><div class="ph"><img src="https://static.wixstatic.com/media/111174_11256945e641452e94010719e04bde9b~mv2.png/v1/fill/w_500,h_500,fp_0.50_0.34,q_85,enc_auto/file.png" alt="Mitchell O'Callaghan, speaker at GIVE IT ALL Bali" loading="lazy" style="object-position:center center"></div><div class="nm">Mitchell O'Callaghan</div><div class="tp">The Peptides Guy</div></div>
-      <div class="person"><div class="ph"><img src="https://static.wixstatic.com/media/111174_d4a42bc2fd294ecf8b638ee3634fa813~mv2.jpeg/v1/fill/w_500,h_500,fp_0.50_0.56,q_85,enc_auto/file.jpeg" alt="Daria Topic, speaker at GIVE IT ALL Bali" loading="lazy" style="object-position:center center"></div><div class="nm">Daria Topic</div><div class="tp">Bet on Yourself</div></div>
-      <div class="person"><div class="ph"><img src="https://static.wixstatic.com/media/111174_03e502b454154e60b5980ec4d19d61fc~mv2.jpg/v1/fill/w_500,h_500,fp_0.50_0.44,q_85,enc_auto/file.jpg" alt="Wild card speaker, selected on the night" loading="lazy" style="object-position:center center"></div><div class="nm">WILD CARD</div><div class="tp">Selected on the night</div></div>
+      <div class="person"><div class="ph"><div class="tba"><svg viewBox="0 0 24 24"><path d="M12 12c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm0 2c-3.33 0-10 1.67-10 5v3h20v-3c0-3.33-6.67-5-10-5z"/></svg></div></div><div class="nm">Announcing soon</div><div class="tp">&nbsp;</div></div>
+      <div class="person"><div class="ph"><div class="tba"><svg viewBox="0 0 24 24"><path d="M12 12c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm0 2c-3.33 0-10 1.67-10 5v3h20v-3c0-3.33-6.67-5-10-5z"/></svg></div></div><div class="nm">Announcing soon</div><div class="tp">&nbsp;</div></div>
+      <div class="person"><div class="ph"><div class="tba"><svg viewBox="0 0 24 24"><path d="M12 12c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm0 2c-3.33 0-10 1.67-10 5v3h20v-3c0-3.33-6.67-5-10-5z"/></svg></div></div><div class="nm">Announcing soon</div><div class="tp">&nbsp;</div></div>
+      <div class="person"><div class="ph"><div class="tba"><svg viewBox="0 0 24 24"><path d="M12 12c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm0 2c-3.33 0-10 1.67-10 5v3h20v-3c0-3.33-6.67-5-10-5z"/></svg></div></div><div class="nm">Announcing soon</div><div class="tp">&nbsp;</div></div>
+      <div class="person"><div class="ph"><div class="tba"><svg viewBox="0 0 24 24"><path d="M12 12c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm0 2c-3.33 0-10 1.67-10 5v3h20v-3c0-3.33-6.67-5-10-5z"/></svg></div></div><div class="nm">Announcing soon</div><div class="tp">&nbsp;</div></div>
+      <div class="person"><div class="ph"><div class="tba"><svg viewBox="0 0 24 24"><path d="M12 12c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm0 2c-3.33 0-10 1.67-10 5v3h20v-3c0-3.33-6.67-5-10-5z"/></svg></div></div><div class="nm">Announcing soon</div><div class="tp">&nbsp;</div></div>
     </div>
   </div>
 </section>
