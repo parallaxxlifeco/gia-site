@@ -1,13 +1,40 @@
-/* GIVE IT ALL — Founders Breakfast page, packaged as a Wix Custom Element.
-   Generated from founders-breakfast.html. Tag name to set in Wix: <gia-founders-breakfast-page>
-   Renders in Shadow DOM so its styles never touch the rest of your Wix site. */
-(function(){
-  if (customElements.get('gia-founders-breakfast-page')) return;
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Founders Breakfast Bali · by GIVE IT ALL</title>
+<meta name="description" content="Join premium networking and build your connections at the curated Founders Breakfast event by GIVE IT ALL and Daniel Lawson. Intimate, connected, and real — everyone gets the spotlight. 25 August · Amavi, Canggu." />
 
-  var CSS = `
+<!--
+==================================================================================
+  GIVE IT ALL · FOUNDERS BREAKFAST — EVENT PAGE  (single-file, host anywhere)
+  --------------------------------------------------------------------------------
+  Elevated re-skin of the Founders Breakfast page using the GIVE IT ALL design
+  system (navy/gold · Montserrat/Caveat). Copy, images and section order mirror
+  the existing live page — refinements only.
 
+  TO UPDATE EACH EVENT:
+    1. Swap the date/venue in the HERO and FINAL sections (search "25 August").
+    2. Replace image URLs (search  src="https://static.wixstatic.com ).
+    3. Confirm the RESERVE link points at the live checkout.
+==================================================================================
+-->
+
+<meta property="og:title" content="Founders Breakfast Bali I Connect as a Human" />
+<meta property="og:description" content="Founders Breakfast: This is intimate, connected, and real. Everyone gets the spotlight." />
+<meta property="og:image" content="https://static.wixstatic.com/media/111174_8500b482574545c38228a7c71c27ef04~mv2.png" />
+<meta property="og:type" content="website" />
+<meta property="og:url" content="https://www.giveitallevent.com/founders-breakfast-bali" />
+<meta name="twitter:card" content="summary_large_image" />
+
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,400&family=Caveat:wght@500;600;700&display=swap" rel="stylesheet" />
+
+<style>
   /* ===================== BRAND TOKENS ===================== */
-  :host{
+  :root{
     --navy:#061938;
     --navy-card:#0D2350;
     --navy-deep:#04122B;
@@ -25,7 +52,7 @@
   }
   *,*::before,*::after{box-sizing:border-box;}
   html{scroll-behavior:smooth;-webkit-text-size-adjust:100%;}
-  :host{display:block;
+  body{
     margin:0;background:var(--navy);color:var(--ink);
     font-family:'Montserrat',system-ui,-apple-system,Segoe UI,Roboto,sans-serif;
     font-weight:400;line-height:1.6;letter-spacing:.005em;
@@ -231,11 +258,17 @@
     .foot-cols{gap:32px;}
     .nav .logo span.full{display:none;}
   }
-`;
+</style>
+</head>
+<body>
 
-  var HTML = `
 <!-- ============ NAV ============ -->
-
+<header class="nav">
+  <div class="wrap">
+    <a class="logo" href="#top"><span class="mark">G</span><span class="full">GIVE IT ALL</span></a>
+    <a class="btn btn-gold btn-sm" href="https://checkout.giveitallevent.com/founders-breakfast-checkout" target="_blank" rel="noopener">Reserve now →</a>
+  </div>
+</header>
 
 <!-- ============ HOME MARK (kept when nav is stripped for the Wix embed) ============ -->
 <a class="home-mark" href="https://www.giveitallevent.com" aria-label="Back to home">G</a>
@@ -414,34 +447,54 @@
 </section>
 
 <!-- ============ FOOTER ============ -->
-<div style="text-align:center;padding:28px 20px 32px;font-size:.72rem;letter-spacing:.02em;opacity:.5;">
-  <a href="https://www.giveitallevent.com/privacy-policy" style="color:var(--ink-2);border-bottom:1px solid rgba(232,198,95,.3);padding-bottom:1px;">Privacy Policy</a>
-  <span style="margin:0 10px;">&middot;</span>
-  <a href="https://www.giveitallevent.com/refund-policy" style="color:var(--ink-2);border-bottom:1px solid rgba(232,198,95,.3);padding-bottom:1px;">Refund Policy</a>
-</div>
-`;
+<footer class="speckle">
+  <div class="wrap">
+    <div class="foot-top">
+      <div class="foot-brand">
+        <a class="logo" href="https://www.giveitallevent.com"><span class="mark">G</span> GIVE&nbsp;IT&nbsp;ALL</a>
+        <p class="lead">Connect as humans again to improve all relationships with each other.</p>
+        <div class="foot-social">
+          <a href="https://www.instagram.com/giveitall_event" target="_blank" rel="noopener">Instagram</a>
+          <a href="https://www.facebook.com/giveitallevent" target="_blank" rel="noopener">Facebook</a>
+          <a href="https://www.youtube.com/@giveitall-speakerandnetworking" target="_blank" rel="noopener">YouTube</a>
+          <a href="https://www.linkedin.com/in/daniel-reconnect-you/" target="_blank" rel="noopener">LinkedIn</a>
+        </div>
+      </div>
+      <div class="foot-cols">
+        <div class="foot-col">
+          <h4>Experiences</h4>
+          <a href="https://www.giveitallevent.com" target="_blank" rel="noopener">Next event</a>
+          <a href="https://www.giveitallevent.com/founders-breakfast-bali" target="_blank" rel="noopener">Founders Breakfast</a>
+          <a href="https://www.giveitallevent.com/speak-at-give-it-all" target="_blank" rel="noopener">Speak on Stage</a>
+          <a href="https://www.parallaxxtransformations.com/coaching-experiences" target="_blank" rel="noopener">Parallaxx Transformations</a>
+          <a href="#" class="is-soon" onclick="return false;">Virtual Membership <span class="soon">soon</span></a>
+        </div>
+        <div class="foot-col">
+          <h4>Our deeper world</h4>
+          <a href="https://www.parallaxxtransformations.com/the-reconnected-man" target="_blank" rel="noopener">Reconnected Man</a>
+          <a href="https://www.parallaxxtransformations.com/the-reconnected-woman" target="_blank" rel="noopener">Reconnected Woman</a>
+          <a href="https://www.giveitallevent.com/reconnect" target="_blank" rel="noopener">Reconnect</a>
+          <a href="https://www.parallaxxtransformations.com/reconnect-you-podcast-with-daniel-lawson" target="_blank" rel="noopener">Reconnect You (Podcast)</a>
+          <a href="https://www.youtube.com/@NotJustHisPlusOne" target="_blank" rel="noopener">Not Just His Plus One</a>
+        </div>
+        <div class="foot-col">
+          <h4>About</h4>
+          <a href="https://www.giveitallevent.com/about-us" target="_blank" rel="noopener">Our story</a>
+          <a href="https://www.giveitallevent.com/members" target="_blank" rel="noopener">Members</a>
+          <a href="https://www.giveitallevent.com/partner-packages" target="_blank" rel="noopener">Partner with us</a>
+        </div>
+      </div>
+    </div>
+    <div class="foot-bottom">
+      <span>© 2026 GIVE IT ALL. All rights reserved.</span>
+      <span class="foot-legal" style="display:inline-flex;gap:18px;flex-wrap:wrap">
+        <a href="https://www.giveitallevent.com/privacy-policy" style="color:inherit;border-bottom:1px solid rgba(232,198,95,.4)">Privacy Policy</a>
+        <a href="https://www.giveitallevent.com/refund-policy" style="color:inherit;border-bottom:1px solid rgba(232,198,95,.4)">Refund Policy</a>
+      </span>
+      <span>25 August · Amavi, Canggu</span>
+    </div>
+  </div>
+</footer>
 
-  if (!document.getElementById('gia-fonts')) {
-    var l = document.createElement('link');
-    l.id = 'gia-fonts'; l.rel = 'stylesheet';
-    l.href = 'https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,400&family=Caveat:wght@500;600;700&display=swap';
-    document.head.appendChild(l);
-  }
-
-  class GIAFoundersBreakfastPage extends HTMLElement {
-    connectedCallback(){
-      if (this._mounted) return; this._mounted = true;
-      var shadow = this.attachShadow({mode:'open'});
-      shadow.innerHTML = '<style>'+CSS+'</style>'+HTML;
-      var root = shadow; var host = this;
-
-      root.querySelectorAll('a[href^="#"]').forEach(function(a){
-        a.addEventListener('click', function(e){
-          var id = a.getAttribute('href');
-          if (id.length > 1) { var t = root.querySelector(id); if (t){ e.preventDefault(); t.scrollIntoView({behavior:'smooth'}); } }
-        });
-      });
-    }
-  }
-  customElements.define('gia-founders-breakfast-page', GIAFoundersBreakfastPage);
-})();
+</body>
+</html>

@@ -403,7 +403,7 @@
       <div class="script" style="margin-bottom:14px;">voted #1 networking event</div>
       <h1 class="h-hero">The networking experience<br>you've been <span class="gold">seeking</span></h1>
       <p class="lede sub">For ambitious creators who build from connection and shared value first. Relationships happen as a result.</p>
-      <div class="facts"><span>23 July</span><span class="sep">·</span><span>6:00pm</span><span class="sep">·</span><span>Amavi, Canggu</span></div>
+      <div class="facts"><span>20 August</span><span class="sep">·</span><span>6:00pm</span><span class="sep">·</span><span>Amavi, Canggu</span></div>
       <div class="hero-cta">
         <a class="btn btn-gold" href="https://checkout.giveitallevent.com/give-it-all-bali-booking" target="_blank" rel="noopener">Get tickets now →</a>
         <span class="seatline" id="heroTimer">Early-bird ends in <b>2d 07h 56m</b></span>
@@ -421,7 +421,7 @@
     <div class="router-grid">
       <div class="router-card">
         <span class="k">In Bali?</span>
-        <h3>Join us in person on 23 July.</h3>
+        <h3>Join us in person on 20 August.</h3>
         <p class="steel">A speaking &amp; networking experience beyond the superficial.</p>
         <a class="btn btn-gold btn-sm" href="https://checkout.giveitallevent.com/give-it-all-bali-booking" target="_blank" rel="noopener">Get tickets →</a>
       </div>
@@ -506,7 +506,7 @@
       <div class="person"><div class="ph"><img src="https://static.wixstatic.com/media/111174_284022a1c97d4dbdb1911d7daacb8586~mv2.jpg/v1/fill/w_500,h_500,fp_0.50_0.30,q_85,enc_auto/file.jpg" alt="Peter Meglis, speaker at GIVE IT ALL Bali" loading="lazy" style="object-position:center center"></div><div class="nm">Peter Meglis</div><div class="tp">Three Lines</div></div>
       <div class="person"><div class="ph"><img src="https://static.wixstatic.com/media/111174_5fb14430c5904d70924aacf165a3cb90~mv2.jpeg/v1/fill/w_500,h_500,fp_0.50_0.26,q_85,enc_auto/file.jpeg" alt="Serena Spink, speaker at GIVE IT ALL Bali" loading="lazy" style="object-position:center center"></div><div class="nm">Serena Spink</div><div class="tp">Trapped by Empathy</div></div>
       <div class="person"><div class="ph"><img src="https://static.wixstatic.com/media/111174_11256945e641452e94010719e04bde9b~mv2.png/v1/fill/w_500,h_500,fp_0.50_0.34,q_85,enc_auto/file.png" alt="Mitchell O'Callaghan, speaker at GIVE IT ALL Bali" loading="lazy" style="object-position:center center"></div><div class="nm">Mitchell O'Callaghan</div><div class="tp">The Peptides Guy</div></div>
-      <div class="person"><div class="ph"><img src="https://static.wixstatic.com/media/111174_d4a42bc2fd294ecf8b638ee3634fa813~mv2.jpeg/v1/fill/w_500,h_500,fp_0.50_0.46,q_85,enc_auto/file.jpeg" alt="Daria Topic, speaker at GIVE IT ALL Bali" loading="lazy" style="object-position:center center"></div><div class="nm">Daria Topic</div><div class="tp">Bet on Yourself</div></div>
+      <div class="person"><div class="ph"><img src="https://static.wixstatic.com/media/111174_d4a42bc2fd294ecf8b638ee3634fa813~mv2.jpeg/v1/fill/w_500,h_500,fp_0.50_0.56,q_85,enc_auto/file.jpeg" alt="Daria Topic, speaker at GIVE IT ALL Bali" loading="lazy" style="object-position:center center"></div><div class="nm">Daria Topic</div><div class="tp">Bet on Yourself</div></div>
       <div class="person"><div class="ph"><img src="https://static.wixstatic.com/media/111174_03e502b454154e60b5980ec4d19d61fc~mv2.jpg/v1/fill/w_500,h_500,fp_0.50_0.44,q_85,enc_auto/file.jpg" alt="Wild card speaker, selected on the night" loading="lazy" style="object-position:center center"></div><div class="nm">WILD CARD</div><div class="tp">Selected on the night</div></div>
     </div>
   </div>
@@ -711,7 +711,7 @@
   <div class="content">
     <div class="wrap">
       <h2 class="h-1" style="max-width:22ch;margin:0 auto;text-align:center;">The event you've been looking for. <span class="gold">The experience where you belong.</span></h2>
-      <div class="facts" style="margin-top:22px;"><span>23 July</span><span class="sep">·</span><span>6:00pm</span><span class="sep">·</span><span>Amavi, Canggu</span></div>
+      <div class="facts" style="margin-top:22px;"><span>20 August</span><span class="sep">·</span><span>6:00pm</span><span class="sep">·</span><span>Amavi, Canggu</span></div>
       <div style="display:flex;justify-content:center;margin-top:6px;"><span class="timer-mini" id="finalTimer">Sales close in 14d 12h 44m</span></div>
       <div style="display:flex;justify-content:center;margin-top:22px;"><a class="btn btn-gold" href="https://checkout.giveitallevent.com/give-it-all-bali-booking" target="_blank" rel="noopener">Get tickets now →</a></div>
       <p class="quiet">Not in Bali? Virtual experience launching soon.</p>
@@ -762,9 +762,9 @@
    CONFIG - edit per event, then re-deploy.
    ============================================================ */
 const CONFIG = {
-  event: { date:"23 July", time:"6:00pm", venue:"Amavi, Canggu" },
+  event: { date:"20 August", time:"6:00pm", venue:"Amavi, Canggu" },
   price: { early:20, full:25, currency:"$" },
-  reveal:"Jul 22",
+  reveal:"Aug 19",
   links: { tickets:"#", virtual:"#", drive:"#", members:"#" },
 
   /* Checkout (GoHighLevel order form). During the early-bird window the timer
@@ -784,8 +784,8 @@ const CONFIG = {
      salesClose     When ticket sales close (e.g. event start). When this
                     passes: countdowns read "Sales are now closed" and the
                     gold buttons disable.                                    */
-  earlyBirdEnds: "2026-07-12T23:59:00+08:00",
-  salesClose:   "2026-07-23T16:00:00+08:00"
+  earlyBirdEnds: "2026-08-09T23:59:00+08:00",
+  salesClose:   "2026-08-20T16:00:00+08:00"
 };
 
 /* ---- FAQ accordion ---- */
