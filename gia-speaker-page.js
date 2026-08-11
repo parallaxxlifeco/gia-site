@@ -50,6 +50,7 @@
     .btn-gold:hover{ transform:translateY(-2px); box-shadow:0 16px 40px -10px rgba(232,198,95,.6); animation:none; }
     .btn-ghost{ background:transparent; color:var(--ink); border:1px solid rgba(177,191,215,.35); }
     .btn-ghost:hover{ border-color:var(--gold); color:var(--gold); }
+    .btn.is-disabled{ pointer-events:none; cursor:not-allowed; opacity:.5; animation:none; box-shadow:none; background:rgba(177,191,215,.16); color:var(--steel); border:1px solid rgba(177,191,215,.28); transform:none; }
     @keyframes btnPulse{
       0%{ box-shadow:0 10px 30px -10px rgba(232,198,95,.5),0 0 0 0 rgba(232,198,95,.5); }
       70%{ box-shadow:0 10px 30px -10px rgba(232,198,95,.45),0 0 0 14px rgba(232,198,95,0); }
@@ -354,7 +355,7 @@
   <div class="nav-inner">
     <a href="https://www.giveitallevent.com" class="logo" aria-label="GIVE IT ALL home"><span class="mark">G</span> GIVE&nbsp;IT&nbsp;ALL</a>
     <div class="nav-cta">
-      <a href="https://reconnect.parallaxxtransformations.com/choose-your-speaker-experience-page" target="_blank" rel="noopener" class="btn btn-gold">Apply now <span class="arrow">→</span></a>
+      <span class="btn btn-gold is-disabled" aria-disabled="true">Unavailable</span>
     </div>
   </div>
 </header>
@@ -369,7 +370,7 @@
     <h1>You have a voice.<br>You're being called to <span class="accent">use it.</span></h1>
     <p class="hero-lead">Everyone has an insight, value, knowledge or wisdom to share. Most have not given themselves permission to share it, or had a stage to share it from. <strong class="accent">That changes here.</strong></p>
     <div class="hero-cta-row">
-      <a href="https://reconnect.parallaxxtransformations.com/choose-your-speaker-experience-page" target="_blank" rel="noopener" class="btn btn-gold">Apply now <span class="arrow">→</span></a>
+      <span class="btn btn-gold is-disabled" aria-disabled="true">Unavailable</span>
       <a href="#packages" class="btn btn-ghost">See packages</a>
     </div>
     <p class="hero-fact"><b>5-minute talks</b> &nbsp;·&nbsp; Raw &amp; real &nbsp;·&nbsp; Pro content captured for you</p>
@@ -402,7 +403,7 @@
           <p>What can the audience take away that can be immediately implementable to improve their life, relationship, business, themselves? Oh, and <span class="accent">five minutes is more than enough</span> when the message is alive in you.</p>
         </div>
         <div style="margin-top:30px">
-          <a href="https://reconnect.parallaxxtransformations.com/choose-your-speaker-experience-page" target="_blank" rel="noopener" class="btn btn-gold">Apply now <span class="arrow">→</span></a>
+          <span class="btn btn-gold is-disabled" aria-disabled="true">Unavailable</span>
         </div>
       </div>
     </div>
@@ -589,7 +590,7 @@
           <li><span class="ic">✓</span> Clipped raw footage</li>
           <li><span class="ic">✓</span> <a href="https://docs.google.com/document/d/1L8VEc95z6oOnUmcdrCfnB4R5Z_aoKufBSf_YPkIz_f8/edit?usp=sharing" target="_blank" rel="noopener">Examples here</a></li>
         </ul>
-        <a href="https://reconnect.parallaxxtransformations.com/choose-your-speaker-experience-standard" target="_blank" rel="noopener" class="btn btn-ghost">Select Standard</a>
+        <span class="btn btn-ghost is-disabled" aria-disabled="true">Unavailable</span>
       </div>
 
       <!-- PRO -->
@@ -604,7 +605,7 @@
           <li><span class="ic">✓</span> Speaker Authority Reel</li>
           <li><span class="ic">✓</span> <a href="https://docs.google.com/document/d/1j6JRrq3jji2HEsnSuYeYKy80mXLc23V9xmJDsbM4XKA/edit?usp=sharing" target="_blank" rel="noopener">Examples here</a></li>
         </ul>
-        <a href="https://reconnect.parallaxxtransformations.com/choose-your-speaker-experience-pro-speaker" target="_blank" rel="noopener" class="btn btn-gold">Select Pro <span class="arrow">→</span></a>
+        <span class="btn btn-gold is-disabled" aria-disabled="true">Unavailable</span>
       </div>
 
       <!-- FEATURED -->
@@ -620,7 +621,7 @@
           <li><span class="ic">✓</span> <a href="https://docs.google.com/document/d/1ELzkr4CLrhSgW5Vsj0PhvVf4iMk1UYfavlIEJsGqsv4/edit?usp=sharing" target="_blank" rel="noopener">Examples here</a></li>
           <li style="color:var(--gold); font-weight:600"><span class="ic">★</span> Limited Spots · Curated</li>
         </ul>
-        <a href="https://reconnect.parallaxxtransformations.com/choose-your-speaker-experience-sub-headliner" target="_blank" rel="noopener" class="btn btn-ghost">Apply here</a>
+        <span class="btn btn-ghost is-disabled" aria-disabled="true">Unavailable</span>
       </div>
     </div>
 
@@ -674,7 +675,7 @@
     <h2>Your voice. Your <span class="accent">expression.</span></h2>
     <p>Share your unique lived experience and wisdom. Leave with content, connections, and elevated authority.</p>
     <div style="display:flex; gap:14px; justify-content:center; flex-wrap:wrap">
-      <a href="https://reconnect.parallaxxtransformations.com/choose-your-speaker-experience-page" target="_blank" rel="noopener" class="btn btn-gold">Apply now <span class="arrow">→</span></a>
+      <span class="btn btn-gold is-disabled" aria-disabled="true">Unavailable</span>
       <a href="https://www.giveitallevent.com" target="_blank" rel="noopener" class="btn btn-ghost">Want to attend instead?</a>
     </div>
   </div>

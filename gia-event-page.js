@@ -406,7 +406,7 @@
       <div class="facts"><span>20 August</span><span class="sep">·</span><span>6:00pm</span><span class="sep">·</span><span>Amavi, Canggu</span></div>
       <div class="hero-cta">
         <a class="btn btn-gold" href="https://checkout.giveitallevent.com/give-it-all-bali-booking" target="_blank" rel="noopener">Get tickets now →</a>
-        <span class="seatline" id="heroTimer">Early-bird ends in <b>2d 07h 56m</b></span>
+        <span class="seatline" id="heroTimer">Tickets close soon</span>
       </div>
       <div class="chip" style="margin-top:6px;">
         <span class="dot"></span> Colombia · Bulgaria · Bali <span class="stars">★★★★★</span>
@@ -499,21 +499,21 @@
         <div class="play"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></div>
         <div class="cap"><div class="nm">Announcing soon</div></div>
       </div>
-      <div class="reel" data-reel="FEATURED reel" data-video="https://video.wixstatic.com/video/111174_26984c1da8264cba921f34017b2e81db/1080p/mp4/file.mp4">
-        <video class="still" src="https://video.wixstatic.com/video/111174_26984c1da8264cba921f34017b2e81db/1080p/mp4/file.mp4#t=0.5" preload="metadata" muted playsinline></video>
+      <div class="reel" data-reel="FEATURED reel" data-video="https://video.wixstatic.com/video/111174_4bae9d25a1e448268f4061e3600cd736/720p/mp4/file.mp4">
+        <video class="still" src="https://video.wixstatic.com/video/111174_4bae9d25a1e448268f4061e3600cd736/720p/mp4/file.mp4#t=0.5" preload="metadata" muted playsinline></video>
         <div class="grad"></div>
         <span class="toptag pill">Featured</span>
         <div class="taste">A taste of the stage</div>
         <div class="play"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></div>
-        <div class="cap"><div class="nm">Announcing soon</div></div>
+        <div class="cap"><div class="nm">Luke Anning</div></div>
       </div>
     </div>
     <p class="spk-note">We reveal the lineup closer to event night. Every speaker is intentionally selected. Come for the speakers, return because of the full experience.</p>
 
     <div class="lineup-h">And the rest of the lineup</div>
     <div class="lineup">
-      <div class="person"><div class="ph"><div class="tba"><svg viewBox="0 0 24 24"><path d="M12 12c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm0 2c-3.33 0-10 1.67-10 5v3h20v-3c0-3.33-6.67-5-10-5z"/></svg></div></div><div class="nm">Announcing soon</div><div class="tp">&nbsp;</div></div>
-      <div class="person"><div class="ph"><div class="tba"><svg viewBox="0 0 24 24"><path d="M12 12c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm0 2c-3.33 0-10 1.67-10 5v3h20v-3c0-3.33-6.67-5-10-5z"/></svg></div></div><div class="nm">Announcing soon</div><div class="tp">&nbsp;</div></div>
+      <div class="person"><div class="ph"><img src="https://static.wixstatic.com/media/111174_8862ad55ae504fb1a4d05ab373f55185~mv2.png/v1/fill/w_500,h_500,fp_0.50_0.34,q_85,enc_auto/file.png" alt="Zac Spowart, speaker at GIVE IT ALL Bali" loading="lazy" style="object-position:center center"></div><div class="nm">Zac Spowart</div><div class="tp">The Villain Within</div></div>
+      <div class="person"><div class="ph"><img src="https://static.wixstatic.com/media/111174_ab382026a31c4d8bb503efc110a23ac1~mv2.png/v1/fill/w_500,h_500,fp_0.50_0.36,q_85,enc_auto/file.png" alt="Ken Wira, speaker at GIVE IT ALL Bali" loading="lazy" style="object-position:center center"></div><div class="nm">Ken Wira</div><div class="tp">Fixing is Disrespecting</div></div>
       <div class="person"><div class="ph"><div class="tba"><svg viewBox="0 0 24 24"><path d="M12 12c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm0 2c-3.33 0-10 1.67-10 5v3h20v-3c0-3.33-6.67-5-10-5z"/></svg></div></div><div class="nm">Announcing soon</div><div class="tp">&nbsp;</div></div>
       <div class="person"><div class="ph"><div class="tba"><svg viewBox="0 0 24 24"><path d="M12 12c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm0 2c-3.33 0-10 1.67-10 5v3h20v-3c0-3.33-6.67-5-10-5z"/></svg></div></div><div class="nm">Announcing soon</div><div class="tp">&nbsp;</div></div>
       <div class="person"><div class="ph"><div class="tba"><svg viewBox="0 0 24 24"><path d="M12 12c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm0 2c-3.33 0-10 1.67-10 5v3h20v-3c0-3.33-6.67-5-10-5z"/></svg></div></div><div class="nm">Announcing soon</div><div class="tp">&nbsp;</div></div>
@@ -672,13 +672,13 @@
       </div>
       <div class="price-row">
         <div>
-          <span class="eb-tag">Early-bird</span>
-          <div class="price"><span class="now">$20</span></div>
-          <p class="incl" id="priceNote" style="margin-top:10px;">Goes to <b style="color:var(--ink-hi);">$25</b> after the early-bird closes. Includes the talks, introductions, portrait, canapés &amp; a cocktail.</p>
+          <span class="eb-tag">Standard</span>
+          <div class="price"><span class="now">$25</span></div>
+          <p class="incl" id="priceNote" style="margin-top:10px;">Includes the talks, introductions, portrait, canapés &amp; a cocktail.</p>
         </div>
         <div class="price-cta">
           <a class="btn btn-gold" href="https://checkout.giveitallevent.com/give-it-all-bali-booking" target="_blank" rel="noopener">Get tickets now →</a>
-          <span class="timer-mini" id="ebPriceWrap">Early-bird ends in <b>02d : 07h : 56m : 44s</b></span>
+          <span class="timer-mini" id="ebPriceWrap" style="display:none;"></span>
         </div>
       </div>
     </div>
@@ -794,7 +794,7 @@ const CONFIG = {
      salesClose     When ticket sales close (e.g. event start). When this
                     passes: countdowns read "Sales are now closed" and the
                     gold buttons disable.                                    */
-  earlyBirdEnds: "2026-08-09T23:59:00+08:00",
+  earlyBirdEnds: "2000-01-01T00:00:00+08:00",
   salesClose:   "2026-08-20T16:00:00+08:00"
 };
 
