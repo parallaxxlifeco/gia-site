@@ -491,13 +491,10 @@
              Featured default video: 111174_26984c1da8264cba921f34017b2e81db
            To ANNOUNCE a speaker: swap data-video + the <video class="still"> src to the speaker's reel,
            and change .cap .nm from "Announcing soon" to the speaker's name. ===== -->
-      <div class="reel headline" data-reel="HEADLINE reel" data-video="https://video.wixstatic.com/video/111174_fc2501f1178542ac9528a5318387144c/1080p/mp4/file.mp4">
-        <video class="still" src="https://video.wixstatic.com/video/111174_fc2501f1178542ac9528a5318387144c/1080p/mp4/file.mp4#t=0.5" preload="metadata" muted playsinline></video>
-        <div class="grad"></div>
+      <div class="reel headline" data-reel="HEADLINE reel" data-video="https://video.wixstatic.com/video/111174_4e1272a6c62c40c38446eaa769c4b668/1080p/mp4/file.mp4">
+        <img class="still" src="https://static.wixstatic.com/media/111174_c69075c4366a47e6b26de52b1b31cf62~mv2.png/v1/fill/w_600,h_1066,q_90,enc_auto/file.png" alt="Joshua King, Headline Speaker at GIVE IT ALL Bali" loading="lazy" style="width:100%;height:100%;object-fit:cover;display:block">
         <span class="toptag pill">Headline</span>
-        <div class="taste">A taste of the stage</div>
         <div class="play"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></div>
-        <div class="cap"><div class="nm">Announcing soon</div></div>
       </div>
       <div class="reel" data-reel="FEATURED reel" data-video="https://video.wixstatic.com/video/111174_4bae9d25a1e448268f4061e3600cd736/720p/mp4/file.mp4">
         <video class="still" src="https://video.wixstatic.com/video/111174_4bae9d25a1e448268f4061e3600cd736/720p/mp4/file.mp4#t=0.5" preload="metadata" muted playsinline></video>
@@ -505,7 +502,6 @@
         <span class="toptag pill">Featured</span>
         <div class="taste">A taste of the stage</div>
         <div class="play"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></div>
-        <div class="cap"><div class="nm">Luke Anning</div></div>
       </div>
     </div>
     <p class="spk-note">We reveal the lineup closer to event night. Every speaker is intentionally selected. Come for the speakers, return because of the full experience.</p>
@@ -516,8 +512,8 @@
       <div class="person"><div class="ph"><img src="https://static.wixstatic.com/media/111174_ab382026a31c4d8bb503efc110a23ac1~mv2.png/v1/fill/w_500,h_500,fp_0.50_0.36,q_85,enc_auto/file.png" alt="Ken Wira, speaker at GIVE IT ALL Bali" loading="lazy" style="object-position:center center"></div><div class="nm">Ken Wira</div><div class="tp">Fixing is Disrespecting</div></div>
       <div class="person"><div class="ph"><img src="https://static.wixstatic.com/media/111174_f3e0cd5c70374efca8ffe9fd47a73620~mv2.jpg/v1/fill/w_500,h_500,fp_0.50_0.34,q_85,enc_auto/file.jpg" alt="Fil Biggs, speaker at GIVE IT ALL Bali" loading="lazy" style="object-position:center center"></div><div class="nm">Fil Biggs</div><div class="tp">Showing Up To Fail</div></div>
       <div class="person"><div class="ph"><img src="https://static.wixstatic.com/media/111174_a2f07310bb2a47b8b651e11bb38a6f41~mv2.jpeg/v1/fill/w_500,h_500,fp_0.50_0.32,q_85,enc_auto/file.jpeg" alt="Chris Howard, speaker at GIVE IT ALL Bali" loading="lazy" style="object-position:center center"></div><div class="nm">Chris Howard</div><div class="tp">Human Expansion</div></div>
-      <div class="person"><div class="ph"><div class="tba"><svg viewBox="0 0 24 24"><path d="M12 12c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm0 2c-3.33 0-10 1.67-10 5v3h20v-3c0-3.33-6.67-5-10-5z"/></svg></div></div><div class="nm">Announcing soon</div><div class="tp">&nbsp;</div></div>
-      <div class="person"><div class="ph"><div class="tba"><svg viewBox="0 0 24 24"><path d="M12 12c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm0 2c-3.33 0-10 1.67-10 5v3h20v-3c0-3.33-6.67-5-10-5z"/></svg></div></div><div class="nm">Announcing soon</div><div class="tp">&nbsp;</div></div>
+      <div class="person"><div class="ph"><img src="https://static.wixstatic.com/media/111174_7b2ab061124e40519ae9baf75d213520~mv2.png/v1/fill/w_500,h_500,fp_0.55_0.36,q_85,enc_auto/file.png" alt="Lea Bapista, speaker at GIVE IT ALL Bali" loading="lazy" style="object-position:center center"></div><div class="nm">Lea Bapista</div><div class="tp">Be of service</div></div>
+      <div class="person"><div class="ph"><img src="https://static.wixstatic.com/media/111174_03e502b454154e60b5980ec4d19d61fc~mv2.jpg/v1/fill/w_500,h_500,fp_0.50_0.44,q_85,enc_auto/file.jpg" alt="Wild card speaker, selected on the night" loading="lazy" style="object-position:center center"></div><div class="nm">WILD CARD</div><div class="tp">Selected on the night</div></div>
     </div>
   </div>
 </section>
