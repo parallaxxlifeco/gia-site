@@ -23,7 +23,8 @@
     links: {
       tickets: "https://www.giveitallevent.com/bali-speaker-networking-event",
       breakfast: "https://www.giveitallevent.com/founders-breakfast-bali",
-      reconnect: "https://www.parallaxxtransformations.com/the-reconnected-man"
+      reconnect: "https://www.parallaxxtransformations.com/the-reconnected-man",
+      reconnectWoman: "https://www.parallaxxtransformations.com/the-reconnected-woman"
     }
   };
 
@@ -31,7 +32,7 @@
   :host{
     --navy:#061938; --navy-card:#0D2350; --navy-deep:#04122B;
     --gold:#E8C65F; --gold-soft:rgba(232,198,95,.14); --gold-line:rgba(232,198,95,.45);
-    --fb:#EFB25A; --rm:#6F9BD8;
+    --fb:#EFB25A; --rm:#6F9BD8; --rw:#E38FA9;
     --ink-hi:#F4F6FB; --ink:#E2E7F1; --ink-2:#B1BFD7;
     --rule:rgba(177,191,215,.22);
     --maxw:1120px; --r:18px;
@@ -87,6 +88,7 @@
   .chip-ev.gia{background:var(--gold);}
   .chip-ev.fb{background:var(--fb);}
   .chip-ev.rm{background:var(--rm);}
+  .chip-ev.rw{background:var(--rw);}
   .chip-ev.other{background:var(--ink-2);}
 
   .legend{display:flex;gap:18px;flex-wrap:wrap;margin-top:18px;font-size:.82rem;color:var(--ink-2);}
@@ -98,6 +100,7 @@
   .ev{display:flex;align-items:center;gap:14px;background:var(--navy-card);border-left:3px solid var(--gold);border-radius:0 12px 12px 0;padding:13px 15px;}
   .ev.fb{border-left-color:var(--fb);}
   .ev.rm{border-left-color:var(--rm);}
+  .ev.rw{border-left-color:var(--rw);}
   .ev-date{text-align:center;min-width:44px;flex:0 0 auto;}
   .ev-date .wd{color:var(--gold);font-size:.66rem;font-weight:700;}
   .ev-date .dd{color:var(--ink-hi);font-size:1.3rem;font-weight:800;line-height:1;}
@@ -267,6 +270,7 @@
         <span><i style="background:var(--gold)"></i> Speaker Night</span>
         <span><i style="background:var(--fb)"></i> Founders Breakfast</span>
         <span><i style="background:var(--rm)"></i> Reconnected Man</span>
+        <span><i style="background:var(--rw)"></i> Reconnected Woman</span>
       </div>
     </div>
   </section>
@@ -361,7 +365,8 @@
       function typeOf(title){
         var t = (title||'').toLowerCase();
         if (t.indexOf('founders breakfast') > -1) return {cls:'fb', short:'Breakfast', label:'Book seat', url:CONFIG.links.breakfast};
-        if (t.indexOf('reconnected man') > -1)    return {cls:'rm', short:'Reconnected', label:'Apply', url:CONFIG.links.reconnect};
+        if (t.indexOf('reconnected woman') > -1)  return {cls:'rw', short:'Reconnected W', label:'Apply', url:CONFIG.links.reconnectWoman};
+        if (t.indexOf('reconnected man') > -1)    return {cls:'rm', short:'Reconnected M', label:'Apply', url:CONFIG.links.reconnect};
         if (t.indexOf('give it all') > -1)        return {cls:'gia', short:'GIVE IT ALL', label:'Get tickets', url:CONFIG.links.tickets};
         return {cls:'other', short:'Event', label:'Details', url:'#'};
       }
