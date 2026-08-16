@@ -415,7 +415,6 @@
     <p class="sub">Free to join, and built to enhance your entire world of GIVE IT ALL experiences.</p>
     <div class="hero-actions">
       <a class="cta" href="#join">Join free <span aria-hidden="true">&darr;</span></a>
-      <a class="text-link" href="https://login.giveitallevent.com/communities/groups/give-it-all-international/home">Already a member? Log in</a>
     </div>
   </div>
 
