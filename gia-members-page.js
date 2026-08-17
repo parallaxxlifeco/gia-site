@@ -402,7 +402,6 @@
         <a href="https://www.giveitallevent.com/about-us" target="_blank" rel="noopener">About</a>
       </nav>
       <div class="nav-cta">
-        <a href="https://login.giveitallevent.com/communities/groups/give-it-all-international/home" class="btn btn-gold">Log in <span class="arrow">&rarr;</span></a>
         <button class="menu-btn" aria-label="Menu"><span></span><span></span><span></span></button>
       </div>
     </div>
